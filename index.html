@@ -1,632 +1,482 @@
-<html>
+<!doctype html>
+<html lang="en">
 
-    <head><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+<!-- Mirrored from www.mahesvaran.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 17 Mar 2024 09:13:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Page Title -->
+    <title>jaiganesh - Personal Portfolio</title>
+    <!---Font Icon-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
 
-        <title>AIG-_-CHAT</title>
+    <!-- Plugins css -->
+    <link rel="stylesheet" href="css/plugins.css">
 
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Modernizr js-->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180674593-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-180674593-1');
+    </script>
     </head>
-    <style>
 
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(120deg, #17bebb, #f0a6ca);
-}
-
-h2{
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-shadow: 0 0 10px #fff,
-  0 0 20px #fff,
-  0 0 80px #fff;
-}
-
-
- .chatbox__user-list {
- 
-  
-  padding: 1em;
-  border-radius: 100px;
-  border: 1px solid transparent;
-  outline: none;
-  font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 1.3;
-  width: 470px;
-  --tw-pinch-zoom: ;
-   text-shadow: 0 0 10px #fff,
-    0 0 20px #fff;
---tw-scroll-snap-strictness: proximity;
-       color:#fff;
-
-  
-}
-.chatbox__user-list{
-
-    animation: typewriter 3s steps(400) 6s 1 normal both,
-    blinkTextCursorb 300ms steps(400) infinite normal;
-    
-}
-@keyframes typewriter {
-
-    from{
-        width:  0;
-    }
-    to{
-        width: 99em;
-    }
-}
-
-@keyframes blinkTextCursorb {
-
-    from{
-        border-right-color: rgba(255, 255, 255, 0.75);
-    }
-    to{
-        border-right-color: transparent;
-    }
-}
-
-.wrappr{
- display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-}
-
-.wrappr textarea {
-  background: rgba(255, 255, 255, 0.05);
-  width: 1100px;
-  height: 99%;
-  border-radius: 0.6em;
-  scroll-padding-bottom: 20px;
-  position: relative;
-  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
-
-}
-textarea::-webkit-scrollbar{
-    width: 6px;
-}
-textarea::-webkit-scrollbar-track{
-    background-color:rgba(255, 255, 255, 0.19);
-}
-textarea::-webkit-scrollbar-thumb{
-    background: linear-gradient(#642bff, #ff22e6);
-    border-radius: 200px;
-}
-
-
-::-webkit-scrollbar{
-    width: 0px;
-}
-
-
-.wrappr input{
-background: rgba(255, 255, 255, 0.03);
-  text-align: center;
-  bottom: 200px;
-  left: 300;
-  width: 600px;
-  border: none;
-  padding: 1.2em;
-  outline: none;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 300;
-  border-color: black;
-  border-radius: 0.6em;
-   box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.3);
-   margin-top: -13px;
-
-}
-
-    </style>
-
-    <body>  
-        
-
-
-       <div class="wrappr">
-           <h2 clas>AIG-_-CHAT </h2>
-            <textarea  id="botChat" class='chatbox__user-list' placeholder="SEND   A   QUESTION">
-            
-        </textarea> 
-        <p id="botChat" class="chatbox__user-list-jai">      
-   <input type="text" placeholder="SEND   A   QUESTION" onKeypress="enterButton(event, document.getElementsByTagName('input')[0].value);" 
-required ></p> 
-       </div>
-          
-
-                
-              
-           
-      <script>
-
-    
-var you = "                                                                                                                                                      Me";
-
-botSays("")
-
-            // Recognized Speech Patterns for Question Responses
-
-var Hello = ["HI", "HEY", "HOWDY", "HEYA", "HOLA", "HELLO", "SUP", "KONNICHIWA", "ALOHA"]
-var Goodbye = ["BYE", "SEE YA", "CYA", "LATER", "ADIOS", "SAYONARA", "SEEYA"]
-var Greeting = ["WHAT'S UP", "HOW'S IT GOING", "HOW ARE YOU", "NICE DAY", "GOOD MORNING", "GOOD NIGHT","UP"]
-
-var jaiganesh = ["JAI","GANESH"]
-
-var Name = [ "WHAT IS YOUR NAME", "WHAT'S YOUR NAME", "WHO ARE YOU", "WHAT DO THEY CALL YOU", "COMO TE LLAMAS"]
-
-var Actions = ["HELP", "DRINK", "CHALLENGE"]
-
-var Questions = ["HTML","CSS"];
-
-var HTMLTags1 = ["FEATURES PYTHON","IDENTIFIERS","FEATURES OF PYTHON","FEATURES","TYPES","PLATFORM","LIST","IDA","ANALYTICS",]
-
-
-
-
-
-
-        // Skip the CMD Line and learn HTML by reading my code!~~ LMAO, here have fun.
-
-var HTMLTags2 = [
-
-"OPEN SOURCE", //    Defines a hyperlink
-
-"STORAGE", //Defines an abbreviation or an acronym
-
-"IMPORTANT CHALLENGES", //    Not supported in HTML5. Use <abbr> instead. Defines an acronym
-
-"DECAYING", //    Defines contact information for the author/owner of a dtyocument
-
-"CHALLENGES", //    Not supported in HTML5. Use <embed> or <object> instead. Defines an embedded applet
-
-"HISTORY", //    Defines an area inside an image-map
-
-"STREAMING", //    Defines an article
-
-"STREAM DATA", //    Defines content aside from the page content
-
-"FILTERING STREAM", //    Defines sound content
-
-"ESTIMATING",
-
-
-
-]
-
-var HTMLTags3 = [
-
-"COUNTING", // Specifies the base URL/target for all relative URLs in a document
-
-"RTAP", //    Not supported in HTML5. Use CSS instead. Specifies a default color, size, and font for all text in a document
-
-"MARKET",    // Isolates a part of text that might be formatted in a different direction from other text outside it
-
-"SENTIMENT",    //Overrides the current text direction
-
-"STREAM",    //Not supported in HTML5. Use CSS instead. Defines big text
-
-"INTRODUCTION", //    Defines a section that is quoted from another source
-
-"WAREHOUSE",    //Defines the document's body
-
-"HADOOP",
-    //Defines a single line break
-
-"<BUTTON>",    //Defines a clickable button
-
-"<CANVAS>"    //Used to draw graphics, on the fly, via scripting (usually JavaScript)
-
-]
-
-var HTMLTags4 = [
-
-"HADOOP",//Defines a table caption
-
-"CHARACTERISTICS", //    Not supported in HTML5. Use CSS instead. Defines centered text
-
-"IMPORTANCE", //Defines the title of a work
-
-"CASES",    //Defines a piece of computer code
-
-"COMPONENTS",
-    //Specifies column properties for each column within a <colgroup> element 
-
-"ITS",    //Specifies a group of one or more columns in a table for formatting
-
-"SCALING",    //Specifies a list of pre-defined options for input controls
-
-"HDFS",    //Defines a description/value of a term in a description list
-
-"DEVELOP",
-
-"NAPREDUCE APPLICATION",    //Defines text that has been deleted from a document
-  //Defines additional details that the user can view or hide
-
-"<DFN>" //    Represents the defining instance of a term
-
-]
-
-var HTMLTags5 = [
-
-    "ADVANTAGES",
-
-    "DISADVANTAGE",
-
-    "MAPREDUCE",
-
-    "FORMATS",
-
-    "ENVIRONMENT",
-
-    "APPLICATION",
-
-    "PIG",
-
-    "HIVE",
-
-    "HIVEQL",
-
-    "HBASE",
-
-    
-
-
-    ]
-
-
-var HTMLTags6 = [
-
-     
-      "ZOOKEEPER",
-
-      "IS BIG DATA",
-
-      "5V",
-      "5 V",
-
-       
-       "ADVANTAGE",
-
-       "UNIT 2",
-
-       "UNIT2",
-
-        "UNIT 3",
-
-       "UNIT3",
-
-
-        "UNIT 4",
-
-       "UNIT4",
-    ]
-
-var HTMLTags7 = [
-
-    "UNIT 5",
-
-      "UNIT",
-
-      "ALL QUESTIONS"
-
-    ]
-
-var colors = ["BLUE", "RED", "GREEN", "YELLOW", "WHITE", "BLACK", "SILVER", "GRAY" ];
-
-var Else = true;
-
-var questions = [colors, HTMLTags4, HTMLTags3, HTMLTags2, HTMLTags1, Hello, Goodbye, Greeting, Name, Actions, Questions];
-
-﻿
-
-var reactions=[BotHello, BotGoodbye,BotGreeting];
-
-var BotHello = ["HI", "HEY", "HOWDY", "HEYA", "HOLA", "HELLO", "SUP", "KONNICHIWA", "ALOHA"]
-
-var BotGoodbye = ["BYE", "SEE YA", "CYA", "LATER", "ADIOS", "SAYONARA", "SEEYA"]
-
-var BotGreeting = ["WHAT'S UP", "HOW'S IT GOING", "HOW ARE YOU", "NICE TO SEE YOU", "GOOD MORNING", "WELCOME"]
-
-var BotPleasant = ["Thanks.", "Good job.", "Cool.", "I see.", "Anyway.", "right-o."]
-﻿
-
-
-function answer(x) {
-
-    var botOut = botChat.value;
-
-    document.getElementsByTagName("textarea")[0] = botChat
-
-    //RESPONSES//
-﻿
-
-                document.getElementsByTagName("input")[0].value = ""
-
-                if (x.charAt(0).includes("!") === false){
-
-                youSay(x); botChat.scrollTop = botChat.scrollHeight;
-
-                } 
-
-                question = x.toUpperCase()
-
-                for (i = 0; i < 10; i++) {
-
-            /*          EMPTY RESPONSE          */
-
-
-
-
-                if (question === "" || null) {
-
-                    setTimeout( function() { botSays("\nAIG-_-CHAT : What? You shy?"); botChat.scrollTop = botChat.scrollHeight;}, 3);
-
-                return; }
-
-
-
-                /*          COMMAND MENU RESPONSES         */                    
-                
-                else if (question === "!MENU" ) {
-
-                botSays("\n\n**Commands are !Name yourName, !Bgcolor backgroundColor, !Text textColor, !Menu, !Secrets, !Tutorial, !Botsay textSays, and !Me textDoes,. Play around."); botChat.scrollTop = botChat.scrollHeight;
-
-                return;
-
-                }else if (question.slice(0,9).includes("!BGCOLOR ") ) {
-
-                    botSays("\n\n**Changed the background color to " + x.slice(9) ); botChat.scrollTop = botChat.scrollHeight; botChat.style.backgroundColor = x.slice(9);
-
-                return;
-
-                } else if (question.slice(0,6).includes("!TEXT ") ) {
-
-                    botSays("\n\n**Changed the text color to " + x.slice(6) ); botChat.scrollTop = botChat.scrollHeight; botChat.style.color = x.slice(6);
-
-                return;
-
-                } else if (question.slice(0,6).includes("!NAME ") ) {
-
-                    you = x.slice(6);
-
-                    botSays("\n\n**Your name is " + you); botChat.scrollTop = botChat.scrollHeight;
-
-                return;
-
-                } else if (question.slice(0,9).includes("!SECRETS") ) {
-
-                    botSays("\n\n**What? I don't have any secrets. I've got nothing to hide."); botChat.scrollTop = botChat.scrollHeight;
-
-                return;
-
-                }
-
-                else if (question.slice(0,10).includes("!TUTORIAL") ) {
-
-                    botSays("\n\n**What? I don't have a tutorial. Read my code, I'm not going to explain myself."); botChat.scrollTop = botChat.scrollHeight;
-
-                return;
-
-                }
-
-                else if (question.slice(0,10).includes("!BOTSAY") ) {
-
-                    botSays("\nAIG-_-CHAT : " + x.slice(8)); botChat.scrollTop = botChat.scrollHeight;
-
-                return;
-
-                } else if (question.slice(0,4).includes("!ME") ) {
-
-                    youDo(x.slice(4)); botChat.scrollTop = botChat.scrollHeight;
-
-                return;
-
-                }
-
-
- /* Questions, Answers and Responses */
-
-
-                if (question.includes(Goodbye[i])) {
-
-                    Else = false;
-
-                    setTimeout(botSays, 300, "\nAIG-_-CHAT : Godspeed. Leave an upvote?")
-
-                } else if (question.includes(Name[i])) {
-
-                    Else = false; setTimeout(botSays, 3, "\nAIG-_-CHAT : My name is chat Bot AI. You can call me AIG-_-CHAT.")
-
-                } else if ( question.includes(HTMLTags1[i]) ) {
-
-                    /*HTML Tag Definitions Courtesy of W3Schools.com*/
-
-                    Else = false; if (HTMLTags1[i] === "FEATURES PYTHON"  || HTMLTags1[i] === "FEATURES OF PYTHON") { setTimeout(botSays, 3, "\n\nAIG-_-CHAT : Python is a popular programming language known for its simplicity, ease of use, and versatility. Here are some of the features of Python:\n\n1.Easy to Learn: Python is a beginner-friendly language that is easy to read and understand.\n2.Open-source: Python is an open-source programming language, which means that it's free to use and can be modified and distributed by anyone.\n3.Interpreted: Python is an interpreted language, which means that the code is executed line by line at runtime, making it easier to debug and test.\nObject-Oriented: Python is an object-oriented programming language, which means that it uses objects and classes to organize code and data.\n5.Portable: Python can run on various platforms like Windows, Linux, and Macintosh.\n6.Extensive Libraries: Python comes with a vast collection of standard libraries that make it easy to perform various tasks like networking, database management, and data analysis.\n7.Dynamic Typing: Python is a dynamically-typed language, which means that data types are inferred automatically at runtime, making it easier to write code and to be more productive.\n8.High-level Language: Python is a high-level language, which means that it abstracts away low-level details of the computer's hardware, allowing developers to focus more on the logic of the code.\n\n\n\n") } else if (HTMLTags1[i] === "IDENTIFIERS" ) { setTimeout(botSays, 3, "\n\nAIG-_-CHAT :\n 1 . An identifier can be made up of letters, digits, and the underscore character (_), but it cannot start with a digit.\n2 . Identifiers are case-sensitive. For example, 'count' and 'Count' are two different identifiers.\n3 . Identifiers should be meaningful and descriptive. This makes it easier to understand the code and makes it more maintainable.\n4 . There are some reserved keywords in programming languages that cannot be used as identifiers because they have a special meaning in the language. Examples include 'if', 'else', 'while', 'for', and 'class'.\n5 . The length of an identifier is typically not limited, but it is a good practice to keep them reasonably short to make the code easier to read and understand.\n6 . In some programming languages, such as Python, a naming convention called 'snake_case' is used for identifiers, where words are separated by underscores.\n In other languages, such as Java, 'camelCase' is used, where the first letter of each word after the first is capitalized .\n\n") } else if (HTMLTags1[i] === "<SPAN>" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : The HTML tag '<Span>' Defines a section in a document.\n\n") } else if (HTMLTags1[i] === "<A>" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : The HTML tag '<Span>' Defines a section in a document.\n\n") }
-                     
-
-
-
- else if (HTMLTags1[i] === "TYPES" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : \n\nThere are typically three types of big data:\n\n1. Structured Data: Structured data is data that is organized into a specific format such as tables, columns, and rows. This type of data is usually stored in a relational database management system (RDBMS) and can be easily queried and analyzed using SQL.\n\n2. Semi-Structured Data: Semi-structured data is data that does not have a formal structure, but still has some organizational properties. This type of data can include documents, emails, and social media posts, which are typically stored in NoSQL databases. Semi-structured data requires some level of processing before it can be analyzed.\n\n3. Unstructured Data: Unstructured data is data that does not have any specific format or structure. This type of data can include text, images, videos, audio files, and social media posts. Unstructured data is typically stored in object-based storage systems and requires advanced analytics tools such as natural language processing (NLP) and machine learning to extract insights.\n\n\n") }
-
- else if (HTMLTags1[i] === "PLATFORM" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : \n\nA big data platform is a comprehensive software solution designed to handle large and complex data sets. It provides a framework for storing, processing, analyzing, and visualizing data from a variety of sources. \n\nSome common features of a big data platform may include:\n\n1. Data storage: A big data platform typically includes a distributed file system that can handle large data sets across multiple servers.\n\n2. Data processing: Big data platforms often have built-in tools for processing and transforming data such as MapReduce, Spark, and Hadoop.\n\n3. Data analysis: Big data platforms offer a range of analytics tools for extracting insights from large data sets. This can include machine learning, data mining, and statistical analysis.\n\n4. Data visualization: Many big data platforms include visualization tools to help users better understand and communicate insights from their data.\n\nExamples of big data platforms include Hadoop, Apache Spark, Microsoft Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).\n\n") }
-
-
-  else if (HTMLTags1[i] === "FEATURES" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nBig data refers to large and complex data sets that cannot be effectively processed using traditional data processing tools. There are several key features of big data:\n\n1. Volume: Big data refers to extremely large data sets that can range from terabytes to petabytes in size. This large volume of data can come from various sources, such as social media, sensors, or e-commerce transactions.\n\n2. Velocity: Big data is generated at a rapid pace and requires real-time processing to keep up with the speed of data creation. This speed can be measured in real-time or near real-time.\n\n3. Variety: Big data comes in a variety of formats, including structured, unstructured, and semi-structured data. This can include text, audio, video, and images, as well as data from various sources such as social media, IoT sensors, and financial transactions.\n\n4. Veracity: Big data is often of uncertain quality and requires careful analysis to ensure accuracy and consistency. This can include dealing with data that is incomplete, inconsistent, or contains errors.\n\n5. Value: Big data is valuable because it can be used to identify patterns and trends that can inform decision-making. This can lead to new insights and innovations, as well as improved efficiency and effectiveness in various industries. \n\n") }
-
-
-   else if (HTMLTags1[i] === "LIST" ) { setTimeout(botSays, 3, "\n\nnAIG-_-CHAT : \n\nBig data can come from various sources and in various forms. Here are some  examples of big data sources:\n\n1. Social Media Data: Social media platforms generate a vast amount of data on a daily basis, including posts, comments, likes, shares, and user behavior data.\n\n2. Machine-generated Data: The Internet of Things (IoT) devices, such as sensors, RFID tags, and connected devices generate data continuously.\n\n3. Financial Data: Banks and financial institutions generate large amounts of data from transactions, credit card purchases, and stock trading.\n\n4. Healthcare Data: Electronic medical records, clinical trials, and medical imaging generate vast amounts of data in the healthcare industry.\n\n5. E-commerce Data: Online shopping platforms generate a massive amount of data on purchases, browsing history, and customer behavior.\n\n6. Transportation Data: Data from GPS, traffic monitoring, and telematics systems generate data in the transportation industry.\n\n7. Weather Data: Weather sensors, satellites, and computer models generate large amounts of data in the weather forecasting industry.\n\n8. Energy Data: Smart grid technology and sensors generate large amounts of data in the energy sector.\n\nThese are just a few examples of big data sources, and there are many more industries and sectors that generate big data.\n\n") }
-
-
-
-
-  else if (HTMLTags1[i] === "IDA" ) { setTimeout(botSays, 3, "\n\nAIG-_-CHAT : \n\nIDA, or Interactive Data Analysis, is a software tool used for data visualization, exploration, and analysis. It was developed at the Lawrence Berkeley National Laboratory and is widely used in the scientific community for analyzing and interpreting large datasets.\n\nIDA allows users to interactively explore their data using a graphical user interface. It provides a range of visualization tools, including scatter plots, histograms, and heatmaps, as well as statistical analysis tools such as regression analysis, correlation analysis, and clustering.\n\nOne of the key benefits of IDA is its ability to handle large and complex datasets. It can work with datasets that have millions of data points, allowing users to explore and analyze data at a high level of detail.\n\nIDA also supports a range of data formats, including CSV, Excel, and HDF5, and can interface with other data analysis tools such as R and Python.Overall, IDA is a powerful and versatile tool for data analysis and visualization, particularly for researchers and scientists working with large and complex datasets.\n\n") }
-
-
-   
-
- else if (HTMLTags1[i] === "ANALYTICS" ) { setTimeout(botSays, 3, "\n\nAIG-_-CHAT : \n\nA real-time analytics platform is a software system designed to collect, process, and analyze data in real-time or near real-time. The platform typically ingests data from various sources such as sensors, devices, or applications and provides real-time insights and analytics based on that data.\n\nReal-time analytics platforms often utilize technologies such as stream processing, distributed systems, and machine learning to enable fast and efficient data processing. These platforms are capable of processing large volumes of data in real-time and can provide insights and analytics to support real-time decision-making.\n\nReal-time analytics platforms are used in a variety of industries, including finance, healthcare, manufacturing, and e-commerce, among others. They can be used to monitor customer behavior, detect anomalies, identify trends, and improve operational efficiency, among other applications. By providing real-time insights, these platforms enable organizations to respond quickly to changes in the market or operational environment, ultimately improving business outcomes.\n\n") }
-
-
-
-
-
-                } else if ( question.includes(HTMLTags2[i]) ) {
-
-                    /*HTML Tag Definitions Courtesy of W3Schools.com*/
-
-                    Else = false; if (HTMLTags2[i] === "OPEN SOURCE" ) { setTimeout(botSays, 3, "\n\nAIG-_-CHAT : \n\nOpen-source big data refers to the use of open-source software to manage, process, and analyze large and complex datasets. Here are some examples of open-source big data tools:\n\n1. Hadoop: Hadoop is an open-source software framework for distributed storage and processing of big data. It is designed to handle large datasets across a cluster of commodity servers and provides tools for data processing, data analysis, and data storage.\n\n2. Apache Spark: Apache Spark is an open-source data processing engine that provides fast processing speeds and in-memory computing capabilities. It supports batch processing, real-time processing, and machine learning algorithms.\n\n3. Apache Kafka: Apache Kafka is an open-source distributed streaming platform that allows users to publish and subscribe to data streams in real-time. It is commonly used for building data pipelines and integrating data from various sources.\n\n4. Elasticsearch: Elasticsearch is an open-source search and analytics engine that is used for full-text search, logging, and real-time analytics. It provides scalable search capabilities and supports real-time indexing and querying.\n\n5. Apache Storm: Apache Storm is an open-source distributed real-time computation system. It is used for processing real-time streaming data and supports complex event processing, real-time analytics, and machine learning.\n\n6. Apache Flink: Apache Flink is an open-source stream processing framework that is designed for high-throughput and low-latency data processing. It supports batch processing, real-time processing, and machine learning.\n\nThese are just a few examples of open-source big data tools that are widely used in the industry. There are many other open-source big data tools available, and the choice of tool depends on the specific requirements of the project.\n\n") } else if (HTMLTags2[i] === "STORAGE" ) { setTimeout(botSays, 3, "\n\nnAIG-_-CHAT : \n\nWhen it comes to storage considerations for big data, there are several key factors to keep in mind. Here are some of the most important considerations:\n\n1. Scalability: Big data storage must be able to scale to handle large amounts of data. This means that the storage solution should be able to expand as data grows, without sacrificing performance or reliability.\n\n2. Data Format: Big data can come in various formats, including structured, unstructured, and semi-structured data. The storage solution must be able to handle these different data formats and provide appropriate tools for processing and analyzing them.\n\n3. Access Speed: In big data environments, data is often accessed frequently and needs to be retrieved quickly. The storage solution should provide fast access speeds to ensure that data can be retrieved and processed in a timely manner.\n\n4. Security: Big data often contains\n\n") } else if (HTMLTags2[i] === "IMPORTANT CHALLENGES" ) { setTimeout(botSays, 3, "\n\nAIG-_-CHAT : \n\nHere are some important challenges of big data:\n\n1. Data Management: One of the biggest challenges of big data is managing the large volumes of data generated from multiple sources, including structured and unstructured data. This involves ensuring data quality, data integration, and data governance.\n\n2. Data Security: With the large volumes of data involved, ensuring data security is critical. Big data platforms need to have robust security measures in place to prevent unauthorized access, data breaches, and cyber attacks.\n\n3. Processing Power: Processing large amounts of data requires significant processing power. Organizations need to have the necessary infrastructure in place to process and analyze big data effectively.\n\n4. Data Privacy: Data privacy is a growing concern, with regulations such as GDPR and CCPA placing greater emphasis on protecting personal data. Organizations need to ensure that they are compliant with these regulations when collecting and using big data.\n\n5. Skillset: Big data requires a unique set of skills, including data scientists, data analysts, and data engineers. Organizations need to ensure that they have the necessary talent in place to effectively manage and analyze big data.\n\n6. Cost: Managing and analyzing big data can be expensive, with the need for specialized infrastructure, software, and skilled personnel. Organizations need to balance the benefits of big data against the cost of implementation.\n\n7. Data Integration: Big data comes from a variety of sources and formats, and integrating this data can be a challenge. Organizations need to have effective data integration strategies to ensure that they can effectively analyze and derive insights from big data.\n\nThese are some of the key challenges of big data that organizations need to consider when implementing big data solutions. Addressing these challenges requires careful planning, investment in the right infrastructure and technology, and a focus on acquiring the necessary talent and skills.\n\n") } else if (HTMLTags2[i] === "DECAYING" ) { setTimeout(botSays, 3, "\n\nAIG-_-CHAT : \n\nDecaying windows algorithm is a technique used in machine learning and data processing to assign more weight to recent data points and less weight to older data points. This is achieved by using a sliding window of fixed size over the data and giving each data point within the window a weight based on its position relative to the most recent data point.\n\nThe weight assigned to each data point decays exponentially as the distance between that data point and the most recent data point increases. This means that the most recent data points are given the highest weight, while the oldest data points are given the least weight. The decay rate is typically determined by a hyperparameter that can be tuned to optimize the algorithm's performance.\n\nThe decaying windows algorithm is commonly used in applications such as time-series forecasting, where recent data points are more relevant to predicting future values than older data points. By giving more weight to recent data points, the algorithm can better capture the underlying trends and patterns in the data, leading to more accurate predictions.\n\n") }else if (HTMLTags2[i] === "CHALLENGES" )  { setTimeout(botSays, 3, "\n\nnAIG-_-CHAT : \n\nHere are some challenges that conventional systems face:\n\n1. Limited Scalability: Conventional systems often have limited scalability and may not be able to handle large amounts of data or increased user traffic without sacrificing performance.\n\n2. High Maintenance Costs: Conventional systems can be expensive to maintain, as they require dedicated hardware, software licenses, and IT support.\n\n3. Limited Flexibility: Conventional systems may be limited in their ability to adapt to changing business needs or new technologies, as they are often built on legacy architectures.\n\n4. Security Risks: Conventional systems may have security vulnerabilities that could expose sensitive data to cyber threats, leading to data breaches or other security incidents.\n\n5. Inefficient Resource Utilization: Conventional systems may not be optimized for resource utilization, leading to wasted processing power, storage space, or energy consumption.\n\n6. Lack of Real-time Analytics: Conventional systems may not be able to provide real-time insights into business operations or customer behavior, leading to delayed decision-making.\n\n7. Data Silos: Conventional systems may store data in silos, making it difficult to access and analyze data across different departments or functions within an organization.\n\nThese are some of the challenges that conventional systems face, which can impact business operations and hinder innovation. To address these challenges, many organizations are adopting new technologies and architectures, such as cloud computing, big data, and artificial intelligence.\n\n") }else if (HTMLTags2[i] === "HISTORY" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : \n\nThe history of big data dates back to the early days of computing when the first computers were developed in the mid-20th century. However, the term big data itself became popular in the early 2000s when data sets became so large and complex that traditional data processing tools and techniques were no longer sufficient to handle them.\n\nIn the early days, big data was primarily used by government agencies and large corporations to store and analyze massive amounts of data such as census data, financial data, and scientific data. However, with the advent of the internet and the rise of social media, big data became increasingly important in the consumer and retail industries as well.\n\nIn the mid-2000s, several technologies emerged that made it easier to collect, store, and analyze big data. One of the most significant developments was the introduction of Hadoop, an open-source distributed computing platform that allowed for the processing of large datasets across clusters of computers. This made it possible to process large datasets in parallel, significantly reducing processing time.\n\nThe rise of cloud computing also played a significant role in the development of big data. Cloud-based services such as Amazon Web Services and Microsoft Azure provided scalable infrastructure for processing and storing large amounts of data, making it more accessible to businesses of all sizes.\n\nToday, big data is used in a wide range of applications, including healthcare, finance, marketing, and more. With the development of machine learning and artificial intelligence, big data is becoming increasingly important in areas such as predictive analytics, natural language processing, and image recognition. As the amount of data generated continues to grow, big data will undoubtedly play an increasingly important role in shaping our world.\n\n") } else if (HTMLTags2[i] === "STREAMING" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : Data streaming is a process in which data is processed continuously and incrementally as it is generated, rather than being stored and processed later. This approach allows for faster and more efficient data processing and analysis, and is particularly well-suited for applications where real-time insights and decision-making are critical.\n\nData streaming involves the continuous flow of data from various sources such as sensors, applications, and devices, which is then processed and analyzed in real-time or near real-time. The data is typically processed in small chunks or batches, which are then combined to provide a complete view of the data over time.\n\nOne of the key advantages of data streaming is its ability to provide real-time insights and analytics. This is particularly important in industries such as finance, healthcare, and e-commerce, where even small delays in data processing can have significant consequences.\n\nData streaming also allows for more efficient use of resources, as data can be processed and analyzed as it is generated, rather than storing it and processing it later. This reduces the need for large storage systems and expensive batch processing tools.\n\nAnother advantage of data streaming is its flexibility. As data is processed continuously, it can be easily updated and modified to reflect changes in the data or the analysis. This makes it easier to adapt to changing business needs and requirements.\n\nThere are several technologies available for data streaming, including Apache Kafka, Amazon Kinesis, and Apache Flink. These platforms provide scalable infrastructure for processing and analyzing large amounts of data in real-time, and are used in a wide range of applications, including fraud detection, predictive maintenance, and real-time analytics.\n\nOverall, data streaming is a powerful concept that allows for real-time data processing and analysis, providing organizations with the ability to make faster and more informed decisions based on the latest data.\n\n") }  else if (HTMLTags2[i] === "STREAM DATA" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : The stream data model is a data processing model that involves processing data as it is generated, rather than storing it and processing it later. This model is particularly well-suited for applications where real-time data processing and analysis are required. \n\nThe architecture of the stream data model is typically composed of four main components: data sources, stream processing engine, stream storage, and stream analytics.\n\n![Stream Data Model Architecture]\n\n(https://i.imgur.com/mZs4J4s.png)\n\n1. Data Sources: This component represents the sources of data that are continuously generating new data. This could include sensors, applications, databases, and other data sources.\n\n2. Stream Processing Engine: The stream processing engine is responsible for processing the data as it is generated. It receives the data from the data sources and applies various operations such as filtering, transformation, aggregation, and enrichment to the data in real-time.\n\n3. Stream Storage: Stream storage is used to store the processed data temporarily until it can be analyzed. This storage is typically designed for high-speed read and write operations, as data needs to be quickly accessed and updated.\n\n4. Stream Analytics: Stream analytics involves analyzing the data in real-time to extract meaningful insights and take action based on those insights. This could include real-time dashboards, alerts, or other actions based on specific conditions.\n\nThe data flow in the stream data model architecture is continuous, with data being generated from data sources, processed by the stream processing engine, stored in stream storage, and analyzed in real-time by stream analytics. This allows organizations to quickly respond to changing business conditions and make informed decisions based on the latest data.\n\nOverall, the stream data model architecture provides a powerful framework for real-time data processing and analysis, enabling organizations to leverage the latest data to drive better business outcomes.\n\n") } else if (HTMLTags2[i] === "FILTERING STREAM" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nFiltering stream in big data refers to the process of selecting specific data from a continuous flow of data (stream) that meets certain criteria or conditions. In other words, it involves applying a filter function to a stream of data to extract only the relevant data points that meet a certain requirement or threshold.\n\nFiltering stream is an important operation in big data processing, as it allows us to reduce the amount of data that needs to be stored or processed, and focus only on the data that is relevant to our analysis or application.\n\nOne common approach for filtering stream is to use a distributed stream processing framework, such as Apache Kafka, Apache Storm, or Apache Flink, which can handle large volumes of data in real-time and provide low-latency processing.\n\nIn these frameworks, a stream processing job is typically composed of multiple stages, including data ingestion, filtering, transformation, and output. The filtering stage is responsible for selecting the relevant data from the stream based on a predefined set of rules or conditions.\n\nFor example, we may filter a stream of sensor data to only include readings that exceed a certain threshold, or filter a stream of customer transactions to only include those that belong to a specific category or timeframe.\n\nTo implement filtering in a stream processing job, we can use various techniques, such as windowing, sliding windows, bloom filters, or time-based filtering.\n\nOverall, filtering stream is a crucial step in big data processing, as it enables us to extract useful insights from large and complex data sets in a scalable and efficient manner.\n\n") }
-                  
-
-                          
-
-
-                } else if ( question.includes(HTMLTags3[i]) ) {
-
-                    Else = false;
-
-                    if (HTMLTags3[i] === "COUNTING" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nCounting ones in a window is a common problem in big data processing, especially in the context of stream processing and real-time analytics. The problem involves counting the number of ones (or true values) in a sliding window of a binary stream, which is a sequence of 0's and 1's that arrive continuously over time.\n\nA sliding window is a fixed-size window that moves over the stream in a sliding fashion, where each window consists of the most recent k elements in the stream. The size of the window (k) is usually specified in advance and can be adjusted based on the application requirements and the characteristics of the data.\n\nTo count ones in a sliding window, we need to maintain an updatable count of the number of ones in the current window, as well as the number of ones in the previous window. When a new element arrives in the stream, we update the count of ones by incrementing or decrementing it based on the value of the new element and the one that is being evicted from the window.\n\nFor example, suppose we have a sliding window of size k=5, and the current window contains the following binary stream:\n\n1 0 1 0 1\n\nThe current count of ones is 3. When a new element 0 arrives, we decrement the count by 1 since the element that is being evicted from the window is a 1. The new count becomes 2. The updated window becomes:\n\n0 1 0 1 0\n\nThe process is repeated for each new element that arrives in the stream, and the count of ones in the window is updated accordingly.\n\nOne efficient way to implement counting ones in a window is to use a sliding window aggregation function in a distributed stream processing framework, such as Apache Flink or Apache Kafka Streams. The aggregation function maintains the count of ones in the window as the stream is processed in a parallel and distributed fashion, and provides low-latency and scalable processing.\n\nOverall, counting ones in a window is a fundamental operation in stream processing and real-time analytics, as it enables us to extract useful insights from continuous data streams and make timely and informed decisions based on the characteristics of the data.\n\n") } else if (HTMLTags3[i] === "RTAP" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nReal-time analytics processing (RTAP) has a wide range of applications in various industries, including finance, healthcare, retail, transportation, and more. Here are some examples of RTAP applications:\n\n1. Fraud detection: Real-time analytics can be used to detect fraud in financial transactions by analyzing patterns and anomalies in real-time data streams. This enables financial institutions to detect and prevent fraudulent activities quickly and efficiently.\n\n2. Predictive maintenance: RTAP can be used to predict equipment failures and maintenance needs by analyzing real-time data from sensors and other monitoring devices. This helps companies to identify potential issues and take proactive measures to avoid costly downtime.\n\n3. Customer engagement: Real-time analytics can be used to personalize customer experiences in real-time by analyzing customer data such as past purchases, browsing behavior, and social media activity. This enables companies to provide customized offers, recommendations, and promotions to customers.\n\n4. Supply chain optimization: RTAP can be used to optimize supply chain operations by analyzing real-time data on inventory levels, demand patterns, and delivery schedules. This enables companies to make informed decisions on inventory management, procurement, and logistics.\n\n5. Traffic management: Real-time analytics can be used to optimize traffic flow and reduce congestion by analyzing real-time data from sensors and cameras. This enables transportation authorities to manage traffic in real-time and make data-driven decisions on road network planning and optimization.\n\n6. Healthcare monitoring: RTAP can be used to monitor patient health in real-time by analyzing data from wearable devices, sensors, and electronic health records. This enables healthcare providers to detect and respond to potential health issues quickly and efficiently.\n\nOverall, RTAP applications have the potential to revolutionize various industries by providing real-time insights and enabling data-driven decision-making in a fast-paced and dynamic environment.\n\n") } else if (HTMLTags3[i] === "MARKET" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : \n\nStock market prediction is a challenging problem in the field of finance and data science, as stock prices are influenced by a wide range of factors such as macroeconomic trends, company performance, and investor sentiment. However, with the availability of vast amounts of financial data and advancements in machine learning algorithms, it is possible to build models that can predict stock prices with a certain degree of accuracy.\n\nOne example of a case study in stock market prediction is the use of deep learning models to predict the stock prices of a particular company. In this case study, historical data on the stock prices, trading volume, and other financial indicators of a company are used to train a deep neural network model, which is then used to make predictions on future stock prices.\n\nThe deep neural network model consists of multiple layers of artificial neurons that can learn complex patterns and relationships in the data. The model is trained using a technique called backpropagation, which involves adjusting the weights of the connections between neurons to minimize the difference between the predicted and actual stock prices.\n\nOnce the model is trained, it can be used to make predictions on future stock prices by feeding in new data on financial indicators. The predictions are generated by applying the trained model to the new data and computing the output of the neural network.\n\nTo evaluate the performance of the model, various metrics such as mean squared error (MSE) and mean absolute error (MAE) can be used to measure the accuracy of the predictions. The model can also be compared against other models such as linear regression, support vector machines (SVM), or random forest to determine its relative performance.Overall, the case study on stock market prediction using deep learning models demonstrates the potential of machine learning algorithms in analyzing and predicting complex financial data. However, it is important to note that stock market prediction is still a challenging and uncertain task, and the accuracy of the predictions may vary based on various factors such as the quality of the data, the complexity of the model, and the underlying economic conditions.\n\n") } else if (HTMLTags3[i] === "SENTIMENT" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : \n\nReal-time sentiment analysis is the process of using natural language processing (NLP) techniques to automatically detect the sentiment or emotional tone expressed in textual data, such as tweets, reviews, and news articles, as they are created and published. A case study on real-time sentiment analysis could involve developing a system that monitors and analyzes social media conversations related to a specific topic or event in real-time, such as a product launch, a political campaign, or a natural disaster.\n\nThe system would need to be trained on a dataset of labeled examples to accurately identify positive, negative, and neutral sentiment. It would also need to be designed to handle large volumes of data in real-time and to adapt to changes in language use and sentiment over time.\n\nThe case study could involve several steps, including data collection, preprocessing, feature extraction, and model training and evaluation. The data collection phase would involve identifying relevant sources of data, such as Twitter or Facebook, and using APIs to retrieve real-time data related to the topic or event of interest. The preprocessing phase would involve cleaning and normalizing the data, removing stop words, and converting the text into a format suitable for analysis.\n\nThe feature extraction phase would involve identifying relevant features or keywords that are strongly associated with positive or negative sentiment, such as specific product features or emotional language. The model training phase would involve using a machine learning algorithm, such as logistic regression or support vector machines, to train a model on the labeled data.\n\nThe evaluation phase would involve testing the accuracy of the model on a separate dataset of labeled examples and fine-tuning the model based on the results. The final system could be used to provide real-time insights into the sentiment of social media conversations related to the topic or event of interest, helping organizations to make informed decisions and respond to emerging trends and issues.\n\n") } else if (HTMLTags3[i] === "STREAM" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : \n\nFiltering a stream refers to the process of extracting only the desired elements from a stream of data. A stream is a continuous flow of data that can be processed and analyzed on the fly. By applying filters, you can reduce the amount of data that needs to be processed and focus only on the relevant information.\n\nHere are the steps involved in filtering a stream:\n\n1. Identify the stream of data: The first step in filtering a stream is to identify the stream of data you want to filter. This could be a continuous stream of data from a sensor, a live video stream, or a stream of tweets from Twitter.\n\n2. Determine the filtering criteria: Once you have identified the stream of data, you need to determine the criteria that will be used to filter the data. This could be a specific value, a range of values, a pattern, or any other condition that you want to apply to the data.\n\n3. Apply the filter: After you have determined the filtering criteria, you need to apply the filter to the stream of data. This can be done in real-time or offline depending on the nature of the stream.\n\n4. Extract the filtered data: Once the filter has been applied, the next step is to extract the filtered data. This could be a subset of the original data stream that meets the filtering criteria.\n\n5. Analyze the filtered data: Finally, the filtered data can be analyzed to gain insights and make decisions. This could involve further processing, visualization, or machine learning algorithms to detect patterns or anomalies in the data.\n\nFiltering a stream can be useful in a wide range of applications such as real-time monitoring, surveillance, quality control, and data analytics. By filtering out irrelevant data, you can focus on the most important information and make more informed decisions.\n\n") } else if (HTMLTags3[i] === "INTRODUCTION" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : \n\nBig data refers to large and complex data sets that are too large to be processed by traditional data processing tools and techniques. The volume, velocity, and variety of data are the three key characteristics that define big data.\n\nWith the rise of digital technologies, the amount of data generated has been increasing exponentially, leading to the need for new tools and techniques to store, process, and analyze this data. Big data technologies such as Hadoop, Spark, and NoSQL databases have emerged to handle the volume and variety of data, while real-time processing capabilities such as stream processing and in-memory computing address the velocity aspect.\n\nBig data has many applications across various fields such as healthcare, finance, marketing, and government. It enables businesses to gain valuable insights into customer behavior, identify new revenue opportunities, and make data-driven decisions. However, handling big data also poses various challenges such as data privacy and security concerns, data quality issues, and the need for specialized skills to work with big data technologies.\n\nIn conclusion, big data is a rapidly growing field with vast potential for businesses and organizations to gain valuable insights and make data-driven decisions. However, to realize the full benefits of big data, it is essential to have the right tools, techniques, and expertise in place.\n\n") } else if (HTMLTags3[i] === "WAREHOUSE" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : \n\nData warehouse and database are both used to store and manage data, but there are some key differences between them:\n\n1. Purpose: A data warehouse is designed to support business intelligence (BI) activities, such as reporting and data analysis. It is used to store historical data that is typically organized by subject rather than by application. A database, on the other hand, is designed to support transactional processing, such as recording sales or tracking inventory.\n\n2. Data Structure: A data warehouse uses a multidimensional data structure called a star schema or a snowflake schema to store data. This structure allows for fast and efficient querying of large amounts of data. A database typically uses a normalized data structure that is optimized for transactional processing.\n\n3. Data Volume: Data warehouses are designed to handle large volumes of data. They are optimized for fast query performance, even when dealing with massive amounts of data. Databases, on the other hand, are typically used to manage smaller amounts of data that are processed in real-time.\n\n4. Data Latency: Data warehouses are optimized for batch processing of data. This means that there may be a delay between when data is entered into the system and when it is available for querying. Databases, on the other hand, are optimized for real-time processing, which means that data is available for querying immediately after it is entered into the system.\n\n5. Data Granularity: Data warehouses typically store data at a higher level of granularity than databases. This means that data is aggregated and summarized to provide insights into business performance. Databases, on the other hand, typically store data at a more detailed level to support transactional processing.\n\n") } else if (HTMLTags3[i] === "<BR>" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : The HTML tag '<br>' Defines a single line break. \n\n") } else if (HTMLTags3[i] === "<BUTTON>" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : The HTML tag '<button>' Defines a clickable button. \n\n") } else if (HTMLTags3[i] === "<CANVAS>" ) { setTimeout(botSays, 3, "\nAIG-_-CHAT : The HTML tag '<canvas>' Used to draw graphics, on the fly, via scripting. Usually Javascript. \n\n") }         
-
-                  }else if ( question.includes(HTMLTags4[i]) ) {
-
-                         Else = false;
-
-                           if (HTMLTags4[i] === "HADOOP" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nApache Hadoop and Apache Spark are both popular big data processing frameworks, but they have significant differences. Here are some of the main differences between Hadoop and Spark:\n\n1. Processing engine: Hadoop uses MapReduce, which is a batch processing engine that processes data in batches. Spark, on the other hand, uses a more versatile processing engine that can handle both batch processing and real-time processing.\n\n2. Memory usage: Hadoop writes data to disk after each MapReduce job, while Spark can keep data in memory, which makes it faster for iterative processing and real-time analysis.\n\n3. Data processing: Hadoop is best suited for processing large volumes of structured or semi-structured data, while Spark is better suited for processing large volumes of unstructured data, such as log files, social media feeds, and sensor data.\n\n4. Programming language: Hadoop is primarily written in Java, while Spark is written in Scala, Java, and Python.\n\n5. Community: Hadoop has a larger and more established community than Spark, which means there are more resources available for Hadoop and more developers with Hadoop expertise.\n\n6. Ecosystem: Hadoop has a larger and more mature ecosystem of tools and technologies built around it, such as Hive, Pig, and HBase. Spark has a smaller ecosystem, but it is growing rapidly and includes tools like Spark SQL, Spark Streaming, and MLlib.\n\n\nHadoop is an open-source software framework used for storing and processing large datasets in a distributed computing environment. It is one of the most widely used technologies in big data analytics. Hadoop is designed to handle massive volumes of data that are beyond the capabilities of traditional data processing systems.\n\nHadoop uses a distributed file system called Hadoop Distributed File System (HDFS) to store and manage large datasets. The Hadoop framework consists of several components, including HDFS, MapReduce, and YARN (Yet Another Resource Negotiator).\n\nMapReduce is a programming model used to process and analyze large datasets in parallel. It breaks down the data into smaller chunks, which are processed in parallel across multiple nodes in a Hadoop cluster. MapReduce is used for distributed processing of data and for running applications on a large dataset.\n\nYARN is a resource management system used for scheduling and allocating resources in a Hadoop cluster. It ensures that the resources in the cluster are used efficiently and optimally.\n\nHadoop is designed to be highly scalable and fault-tolerant, which means that it can handle large datasets without compromising on performance or reliability. It can run on commodity hardware, which makes it a cost-effective solution for organizations that need to process large volumes of data.\n\nOverall, Hadoop is a powerful tool for big data analytics, as it provides a scalable, distributed computing environment for processing and analyzing large datasets. Its flexibility, cost-effectiveness, and fault-tolerance make it an ideal choice for organizations that need to process and analyze massive amounts of data.\n\n") }
-                            if (HTMLTags4[i] === "CHARACTERISTICS" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nBig data refers to vast amounts of structured, semi-structured, and unstructured data that cannot be processed and analyzed using traditional data processing tools and techniques. Big data is characterized by the following four characteristics:\n\n1. Volume: Big data is characterized by a large volume of data. The amount of data generated is growing exponentially, and the data generated can range from terabytes to petabytes.\n\n2. Velocity: Big data is generated at a high speed, and it requires real-time processing. The data is generated from various sources such as social media, sensors, and machines, which generates data at a high speed.\n\n3. Variety: Big data is characterized by a variety of data types such as structured, semi-structured, and unstructured data. Structured data is data that can be easily organized and analyzed, whereas unstructured data includes images, videos, and social media posts.\n\n4. Veracity: Big data is often of uncertain quality and requires special processing techniques to verify the accuracy and quality of the data. Veracity refers to the quality, reliability, and accuracy of the data.\n\nIn addition to these four characteristics, big data also requires specialized tools and technologies such as Hadoop, NoSQL, and MapReduce for processing and analyzing the data. Big data analytics can help organizations make better decisions, improve customer experience, and gain a competitive advantage in their industry.\n\n") }
-                            if (HTMLTags4[i] === "IMPORTANCE" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nBig data has become increasingly important in today's world due to its ability to provide valuable insights and help organizations make better decisions. Some of the key benefits and importance of big data are as follows:\n\n1. Improved decision-making: Big data analytics can provide valuable insights that help organizations make better, data-driven decisions. By analyzing large volumes of data, organizations can gain a better understanding of their customers, products, and markets, and use this information to improve their business strategies.\n\n2. Increased efficiency: Big data analytics can help organizations identify inefficiencies in their operations and supply chain, leading to cost savings and improved productivity. For example, by analyzing data from sensors in manufacturing plants, organizations can identify potential bottlenecks and optimize their production processes.\n\n3. Enhanced customer experience: Big data can help organizations better understand their customers and provide a more personalized experience. By analyzing customer data, organizations can identify patterns and preferences, and tailor their products and services to meet the needs of their customers.\n\n4. Improved risk management: Big data analytics can help organizations identify and manage risks more effectively. By analyzing data from various sources, organizations can identify potential risks and take proactive measures to mitigate them.\n\n5. Competitive advantage: Big data can provide a competitive advantage to organizations by helping them stay ahead of the curve in terms of innovation and customer experience. By leveraging the insights provided by big data analytics, organizations can develop new products and services that better meet the needs of their customers and outperform their competitors.\n\nIn summary, big data has become an essential tool for organizations looking to gain a competitive advantage, improve their decision-making, and enhance their customer experience. By analyzing vast amounts of data, organizations can gain valuable insights and make informed decisions that lead to improved performance and business outcomes.\n\n") }
-                            if (HTMLTags4[i] === "CASES" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nHere are some examples of big data use cases across different industries:\n\n1. Healthcare: Big data can be used to improve patient outcomes and reduce costs. For example, analyzing patient data can help healthcare providers identify patterns and trends in diseases, leading to earlier diagnoses and more effective treatments.\n\n2. Retail: Big data can help retailers optimize their inventory management and improve customer experience. For example, analyzing customer data can help retailers better understand their preferences and shopping habits, leading to more targeted marketing campaigns and personalized recommendations.\n\n3. Finance: Big data can be used to identify and manage risks, as well as to detect fraud. For example, analyzing transaction data can help financial institutions identify potential fraudulent activities and take appropriate actions to prevent them.\n\n4. Manufacturing: Big data can help manufacturers optimize their production processes and reduce costs. For example, analyzing sensor data from manufacturing equipment can help identify potential bottlenecks and optimize production schedules.\n\n5. Transportation: Big data can be used to improve transportation systems and reduce traffic congestion. For example, analyzing traffic data can help identify patterns and trends in traffic flow, leading to more efficient traffic management and reduced congestion.\n\n6. Energy: Big data can help energy companies optimize their operations and reduce costs. For example, analyzing data from sensors in power plants can help identify potential equipment failures and schedule maintenance proactively, leading to reduced downtime and increased efficiency.\n\nThese are just a few examples of the many use cases for big data across various industries. The key is to identify the business challenges that can be addressed through big data analytics and develop the appropriate data management and analysis strategies to address them.\n\n") }
-                            if (HTMLTags4[i] === "COMPONENTS" || HTMLTags4[i] === "ITS")  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nYARN (Yet Another Resource Negotiator) is a key component of the Hadoop framework. It is a resource management system that is used to schedule and allocate resources in a Hadoop cluster. YARN separates the resource management and job scheduling functions of Hadoop from the MapReduce programming model, allowing other distributed computing frameworks to run on top of Hadoop.\n\nYARN has three major components:\n\n1. Resource Manager: The Resource Manager is responsible for managing the resources in a Hadoop cluster. It is the central authority that manages the allocation of resources across the cluster, and ensures that the resources are used optimally. The Resource Manager consists of two main components:\n\n- Scheduler: The Scheduler is responsible for allocating resources to the various applications running in the cluster. It maintains a list of available resources and schedules tasks based on the resource requirements of the applications.\n\n- Application Manager: The Application Manager is responsible for managing the lifecycle of an application running in the cluster. It is responsible for starting, stopping, and monitoring the application, and for ensuring that it runs successfully.\n\n2. Node Manager: The Node Manager runs on each node in the Hadoop cluster and is responsible for managing the resources available on that node. It communicates with the Resource Manager to receive instructions on how to allocate resources to the applications running on the node.\n\n3. Application Master: The Application Master is responsible for managing the execution of a specific application in the cluster. It negotiates resources with the Resource Manager, coordinates the allocation of resources with the Node Manager, and monitors the progress of the application. The Application Master is specific to each application, and is responsible for managing the resources required by that application.\n\n\nYARN provides a flexible and scalable resource management system that can support a wide range of distributed computing frameworks in addition to MapReduce. This allows organizations to run multiple distributed computing frameworks on a single Hadoop cluster, providing a unified and efficient platform for big data processing and analysis.\n\n") }
-                            if (HTMLTags4[i] === "SCALING" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nScaling out, also known as horizontal scaling, is a technique used in computer systems to increase their capacity and performance by adding more computing resources, such as servers or nodes, to the existing infrastructure. The primary goal of scaling out is to distribute the workload across multiple computing resources, thereby improving the system's ability to handle increased traffic and data volumes.\n\nScaling out is an important strategy for handling big data workloads, as the volume and velocity of data generated by modern applications continue to increase exponentially. By adding more computing resources to a system, organizations can process and analyze large volumes of data more efficiently and effectively, without compromising on performance or reliability.\n\nScaling out is different from scaling up, which involves adding more resources to a single server or node. Scaling out is typically more cost-effective and flexible than scaling up, as it allows organizations to scale their infrastructure as needed, and to take advantage of the benefits of distributed computing, such as fault tolerance, high availability, and load balancing.\n\nSome of the key benefits of scaling out include:\n\n- Increased capacity and performance\n- Improved fault tolerance and high availability\n- Reduced risk of system failure\n- Improved scalability and flexibility\n- Cost-effective and efficient use of resources\n\nOverall, scaling out is an essential strategy for handling big data workloads and ensuring that organizations can process and analyze large volumes of data efficiently and effectively. By adopting a scalable, distributed computing architecture, organizations can take advantage of the benefits of big data analytics and gain a competitive edge in today's data-driven economy.\n\n") }
-                            if (HTMLTags4[i] === "HDFS" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nJava interfaces are an important part of the Hadoop Distributed File System (HDFS) API. Java interfaces define a set of methods that can be implemented by classes to provide specific functionality. In the context of HDFS, Java interfaces define the methods that can be used to interact with the file system and perform operations such as reading and writing files, managing directories, and accessing metadata.\n\nSome of the key Java interfaces in HDFS include:\n\n1. FileSystem: The FileSystem interface provides methods for interacting with the file system, such as creating, deleting, and modifying files and directories, and retrieving file metadata.\n\n2. Path: The Path interface provides methods for working with file and directory paths in HDFS. It can be used to create new paths, resolve existing paths, and retrieve path information.\n\n3. FSDataInputStream and FSDataOutputStream: These interfaces provide methods for reading and writing data to and from files in HDFS. FSDataInputStream is used to read data from a file, while FSDataOutputStream is used to write data to a file.\n\n4. FileSystem.Statistics: This interface provides methods for retrieving statistics about the file system, such as the number of bytes read or written, and the number of files created or deleted.\n\nBy implementing these Java interfaces, developers can write HDFS client applications in Java and interact with HDFS programmatically. These interfaces provide a high-level abstraction over the underlying HDFS API, making it easier for developers to write code that interacts with the file system.\n\nOverall, Java interfaces are an essential part of the HDFS API, providing a standardized set of methods that can be used to interact with the file system and perform operations on files and directories. By using these interfaces, developers can write robust, scalable, and efficient HDFS client applications in Java.\n\n") }
-                            if (HTMLTags4[i] === "DEVELOP" || HTMLTags4[i] === "NAPREDUCE APPLICATION")  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nTo develop a MapReduce application, you can follow these general steps:\n\n1. Identify the problem: The first step in developing a MapReduce application is to identify the problem that you want to solve. This could be anything from processing log files to analyzing customer data.\n\n2. Design the MapReduce job: Once you have identified the problem, you need to design the MapReduce job that will solve it. This involves breaking the problem down into smaller tasks that can be performed in parallel.\n\n3. Write the MapReduce code: The next step is to write the MapReduce code. This involves implementing the map and reduce functions that will perform the tasks defined in the job design.\n\n4. Test the MapReduce job: Once the code is written, you need to test the MapReduce job to ensure that it is working as expected. You can do this by running the job on a small data set and verifying that the output is correct.\n\n5. Configure the MapReduce cluster: Once you have tested the job, you need to configure the MapReduce cluster. This involves setting up the Hadoop Distributed File System (HDFS) and the MapReduce framework.\n\n6. Run the MapReduce job: With the MapReduce cluster configured, you can now run the job on the full data set. This will involve submitting the job to the cluster and monitoring its progress.\n\n7. Analyze the results: Once the job is complete, you can analyze the results to gain insights into the problem you were trying to solve.\n\nOverall, developing a MapReduce application requires a solid understanding of the MapReduce programming model and the Hadoop ecosystem. By following these steps and leveraging the tools and frameworks available in Hadoop, you can develop powerful and scalable MapReduce applications that can process and analyze large volumes of data.\n\n") }
-                         
-
-
-
-
-
-                } else if ( question.includes(HTMLTags5[i]) ) {
-
-                    Else = false;
-
-                       if (HTMLTags5[i] === "ADVANTAGES" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nTo develop a MapReduce application, you can follow these general steps:\n\n1. Identify the problem: The first step in developing a MapReduce application is to identify the problem that you want to solve. This could be anything from processing log files to analyzing customer data.\n\n2. Design the MapReduce job: Once you have identified the problem, you need to design the MapReduce job that will solve it. This involves breaking the problem down into smaller tasks that can be performed in parallel.\n\n3. Write the MapReduce code: The next step is to write the MapReduce code. This involves implementing the map and reduce functions that will perform the tasks defined in the job design.\n\n4. Test the MapReduce job: Once the code is written, you need to test the MapReduce job to ensure that it is working as expected. You can do this by running the job on a small data set and verifying that the output is correct.\n\n5. Configure the MapReduce cluster: Once you have tested the job, you need to configure the MapReduce cluster. This involves setting up the Hadoop Distributed File System (HDFS) and the MapReduce framework.\n\n6. Run the MapReduce job: With the MapReduce cluster configured, you can now run the job on the full data set. This will involve submitting the job to the cluster and monitoring its progress.\n\n7. Analyze the results: Once the job is complete, you can analyze the results to gain insights into the problem you were trying to solve.\n\nOverall, developing a MapReduce application requires a solid understanding of the MapReduce programming model and the Hadoop ecosystem. By following these steps and leveraging the tools and frameworks available in Hadoop, you can develop powerful and scalable MapReduce applications that can process and analyze large volumes of data.\n\n") }
-                            if (HTMLTags5[i] === "DISADVANTAGE" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nWhile big data has numerous advantages, it also has some disadvantages, including:\n\n1. Cost: Processing and storing large volumes of data can be expensive. Big data solutions often require significant investments in hardware, software, and skilled personnel to manage and maintain the systems.\n\n2. Complexity: Big data technologies can be complex and difficult to manage. Organizations must have skilled personnel who can handle the complexity of big data tools and systems.\n\n3. Security: Big data presents security challenges, as it can contain sensitive and personal information. Proper security measures must be implemented to protect data from unauthorized access or cyber-attacks.\n\n4. Quality: Big data is often unstructured, meaning that it may contain incomplete, inconsistent, or inaccurate data. Data quality issues can impact the accuracy of analysis and decision-making.\n\n5. Ethical concerns: Big data can raise ethical concerns related to privacy, data ownership, and data bias. Organizations must consider these concerns when collecting and analyzing data.\n\nOverall, the advantages of big data often outweigh the disadvantages. However, it is important for organizations to be aware of these challenges and take steps to mitigate them. This can include implementing robust security measures, investing in data quality management, and considering ethical implications when working with big data.\n\n") }
-                            if (HTMLTags5[i] === "MAPREDUCE" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nThe anatomy of a MapReduce job run can be broken down into several stages:\n\n1. Job Submission: The first stage of a MapReduce job run is job submission. In this stage, the user submits the job to the Hadoop cluster, specifying the input data location, the map and reduce functions, and other job parameters.\n\n2. Job Initialization: Once the job is submitted, the Hadoop cluster initializes the job. This involves allocating resources, such as map and reduce slots, and preparing the environment for the job.\n\n3. Map Phase: The map phase is the first stage of actual data processing. In this stage, the input data is processed by the map function and broken down into key-value pairs.\n\n4. Shuffle and Sort Phase: The shuffle and sort phase is an intermediate stage between the map and reduce phases. In this stage, the key-value pairs produced by the map function are shuffled and sorted based on their keys.\n\n5. Reduce Phase: The reduce phase is the second stage of actual data processing. In this stage, the sorted key-value pairs are processed by the reduce function, which aggregates the values associated with each key.\n\n6. Output Phase: The output phase is the final stage of a MapReduce job run. In this stage, the output data is written to the specified output location.\n\nThroughout the MapReduce job run, the Hadoop cluster monitors the job's progress and handles any failures or errors that may occur. Additionally, the cluster may optimize the job execution by allocating additional resources or adjusting the data processing pipeline.\n\nOverall, the anatomy of a MapReduce job run highlights the distributed and parallel nature of the MapReduce programming model, as well as the fault-tolerance and scalability of the Hadoop cluster.\n\n") }
-                            if (HTMLTags5[i] === "FORMATS" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nIn the context of big data, there are several formats used to store, process, and analyze large volumes of data efficiently. Some of the common data formats used in big data are:\n\n1. CSV (Comma-Separated Values): CSV is a simple file format used for storing and exchanging tabular data. It is a lightweight and easy-to-use format that can be read and written by almost any data processing tool.\n\n2. JSON (JavaScript Object Notation): JSON is a lightweight data interchange format that is easy to read and write. It is used to represent structured data and is widely used in web applications and APIs.\n\n3. Avro: Avro is a data serialization system that is designed to support efficient data encoding and decoding. It supports schema evolution and is used in Apache Hadoop, Apache Kafka, and other big data processing frameworks.\n\n4. Parquet: Parquet is a columnar storage format that is optimized for large-scale analytics workloads. It is designed to minimize I/O and improve performance by storing related data in a column-oriented manner.\n\n5. ORC (Optimized Row Columnar): ORC is another columnar storage format that is designed to provide high performance for big data processing. It supports compression and advanced indexing techniques to optimize query performance.\n\n6. Apache Arrow: Apache Arrow is a cross-language development platform for in-memory data processing. It provides a standardized data format that can be used by multiple programming languages and tools.\n\nThese formats are designed to handle the challenges of big data, such as large data volumes, distributed data storage, and complex data structures. By using these formats, organizations can store, process, and analyze big data more efficiently and effectively.\n\n") }
-                            if (HTMLTags5[i] === "ENVIRONMENT" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nHadoop is an open-source distributed computing framework designed for processing and storing large data sets in a distributed computing environment. It provides a scalable and fault-tolerant platform that enables organizations to store and process big data. \n\nThe Hadoop ecosystem consists of several components that work together to provide a complete big data solution. Here is an overview of the Hadoop environment and its components:\n\n1. Hadoop Distributed File System (HDFS): HDFS is the primary storage system used by Hadoop. It is a distributed file system that provides reliable and scalable data storage across multiple nodes in a Hadoop cluster. HDFS is designed to handle large files and can store petabytes of data.\n\n2. Yet Another Resource Negotiator (YARN): YARN is a cluster management system that manages resources across a Hadoop cluster. It provides a central platform for scheduling and managing applications in a multi-tenant environment.\n\n3. MapReduce: MapReduce is a programming model used by Hadoop to process large volumes of data in parallel. It breaks down large data sets into smaller chunks and processes them in parallel across multiple nodes in a Hadoop cluster. MapReduce is used to perform batch processing of data.\n\n4. Hadoop Common: Hadoop Common provides the common libraries and utilities used by other Hadoop components. It includes the Java libraries and utilities required to run Hadoop applications.\n\n5. Apache Hive: Hive is a data warehousing tool used for querying and analyzing large datasets stored in Hadoop. It provides a SQL-like interface for querying data and can be used to create tables, load data, and perform analysis.\n\n6. Apache Pig: Pig is a high-level scripting language used for data analysis. It provides a simple and expressive language for transforming and processing large datasets in Hadoop.\n\n7. Apache Spark: Spark is an open-source data processing engine used for processing large-scale data in real-time. It provides a distributed computing framework for data processing, machine learning, and graph processing.\n\nOverall, the Hadoop environment is designed to provide a complete solution for storing, processing, and analyzing large data sets. It provides a scalable, fault-tolerant, and cost-effective platform for organizations to manage big data.\n\n") }
-                            if (HTMLTags5[i] === "APPLICATION" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nApache Pig is a high-level scripting language used for data analysis in Hadoop. Pig is designed to simplify the process of developing complex MapReduce jobs by providing a simple and expressive language for data processing. Here are some examples of how Pig can be used in big data applications:\n\n1. ETL (Extract, Transform, Load): Pig can be used to perform ETL operations on large datasets. For example, Pig can be used to extract data from multiple sources, transform it into a structured format, and load it into a data warehouse for further analysis.\n\n2. Data processing: Pig can be used to process large datasets in Hadoop. For example, Pig can be used to perform data cleansing, filtering, aggregation, and sorting operations on large volumes of data.\n\n3. Data analysis: Pig can be used for data analysis tasks such as identifying patterns, trends, and anomalies in large datasets. For example, Pig can be used to perform sentiment analysis on social media data, analyze customer behavior in e-commerce data, and identify fraud in financial data.\n\n4. Machine learning: Pig can be used for machine learning tasks such as classification, clustering, and regression analysis. For example, Pig can be used to build predictive models for customer churn prediction, fraud detection, and recommendation systems.\n\n5. Graph processing: Pig can be used for graph processing tasks such as analyzing social networks, web graphs, and biological networks. For example, Pig can be used to analyze the structure of a social network, identify important nodes, and find communities of users with similar interests.\n\nIn summary, Pig is a powerful tool for processing and analyzing big data in Hadoop. It provides a simple and expressive language for data processing that can be used to perform a wide range of data analysis tasks.\n\n") }
-                            if (HTMLTags5[i] === "PIG" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nApache Pig is a high-level data flow language used for analyzing large datasets in Hadoop. It provides a simple and expressive language for data processing and is designed to make it easy to develop complex data processing pipelines. Here are some of the key features of Pig:\n\n1. Simplified programming: Pig provides a simple and intuitive language for data processing that is easy to learn and use. The language is designed to abstract away the complexity of writing MapReduce jobs, making it easier to develop and maintain data processing pipelines.\n\n2. Data type flexibility: Pig supports a wide range of data types, including structured, semi-structured, and unstructured data. This makes it easy to process data from different sources and formats without having to write custom code.\n\n3. Data processing optimization: Pig is optimized for processing large datasets in a distributed environment. It can automatically optimize data processing pipelines and generate efficient MapReduce jobs that take advantage of the underlying Hadoop cluster.\n\n4. Extensibility: Pig is highly extensible and can be easily integrated with other Hadoop components and third-party tools. This makes it easy to build custom data processing pipelines and incorporate new data sources and formats.\n\n5. User-defined functions: Pig allows users to define custom functions that can be used in data processing pipelines. This makes it easy to reuse code and incorporate custom processing logic into data processing pipelines.\n\n6. Interactive shell: Pig provides an interactive shell that allows users to interactively explore and process data. This makes it easy to experiment with data processing pipelines and debug issues.\n\nOverall, Pig is a powerful tool for processing and analyzing big data in Hadoop. Its simple and intuitive language, flexibility, and extensibility make it a popular choice for data scientists and engineers working with large datasets.\n\n") }
-
-                             if (HTMLTags5[i] === "HIVE" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nApache Hive is a data warehousing tool that provides a SQL-like interface to Hadoop. It allows users to analyze and query large datasets stored in Hadoop using SQL-like syntax. Here are some of the key services provided by Hive:\n\n1. Data management: Hive provides a way to manage large datasets stored in Hadoop. It allows users to define schemas, partition data, and manage tables and databases.\n\n2. SQL-like query language: Hive provides a SQL-like query language called HiveQL that allows users to analyze and query data stored in Hadoop. HiveQL is similar to SQL and allows users to write complex queries using familiar syntax.\n\n3. Optimization: Hive optimizes queries for efficient execution in a Hadoop cluster. It leverages the underlying Hadoop Distributed File System (HDFS) to perform efficient data scans and uses MapReduce for distributed processing.\n\n4. Integration with Hadoop ecosystem: Hive integrates with other Hadoop ecosystem components such as Pig, Spark, and HBase. This allows users to easily transfer data between different tools and perform complex data processing tasks.\n\n5. User-defined functions: Hive allows users to define custom functions that can be used in queries. This enables users to extend the functionality of Hive and incorporate custom processing logic into their queries.\n\n6. Web interface: Hive provides a web interface that allows users to interactively explore and query data. This interface provides a way to write and execute HiveQL queries, view query results, and manage Hive resources.\n\nOverall, Hive provides a powerful way to manage and analyze large datasets stored in Hadoop. Its SQL-like interface, optimization, and integration with other Hadoop components make it a popular choice for data warehousing and analytics.\n\n") }
-                             if (HTMLTags5[i] === "HIVEQL" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nHiveQL is a SQL-like query language used by Apache Hive to query and analyze large datasets stored in Hadoop. It provides a familiar syntax for querying data and supports a wide range of SQL-like operations, including joins, aggregations, and subqueries. Here are some key features and components of HiveQL:\n\n1. Tables and Databases: HiveQL allows users to create and manage tables and databases. Tables can be created using external data sources or by loading data from Hadoop Distributed File System (HDFS).\n\n2. Data Types: HiveQL supports various data types, including primitive types (such as INT, BOOLEAN, and STRING), complex types (such as STRUCT, ARRAY, and MAP), and user-defined types.\n\n3. SQL-Like Syntax: HiveQL uses a syntax similar to SQL, making it easy for SQL developers to write and understand HiveQL queries. HiveQL supports SQL operations such as SELECT, WHERE, GROUP BY, ORDER BY, JOIN, UNION, and subqueries.\n\n4. Partitioning and Bucketing: HiveQL allows users to partition tables by one or more columns, which helps in faster query processing. Bucketing is another technique to partition data in a table based on a hash function, which helps in better data distribution and faster querying.\n\n5. User-Defined Functions (UDFs): HiveQL allows users to define custom functions in Java or other programming languages, which can be used in queries for data processing or transformation.\n\n6. SerDes: HiveQL uses SerDes (Serializer/Deserializer) to read and write data in different formats, such as CSV, JSON, Avro, Parquet, and ORC.\n\n7. Optimization: HiveQL optimizes queries for efficient execution in a Hadoop cluster. It leverages the underlying Hadoop Distributed File System (HDFS) to perform efficient data scans and uses MapReduce for distributed processing. It also uses techniques like query optimization, table partitioning, and bucketing for faster query processing.\n\nIn summary, HiveQL is a powerful SQL-like query language that provides a familiar syntax for querying and analyzing large datasets stored in Hadoop. It supports various SQL operations, data types, partitioning and bucketing techniques, UDFs, and optimization techniques for faster query processing.\n\n") }
-                             if (HTMLTags5[i] === "HBASE" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nApache HBase is a NoSQL database that provides real-time read/write access to large, distributed datasets. Here are the fundamentals of HBase:\n\n1. Data Model: HBase is based on the data model of Google's Bigtable, which is a distributed key-value store. In HBase, data is organized into tables, which consist of rows and columns. Rows are identified by a unique row key and columns are grouped into column families. HBase provides high scalability and performance for storing and retrieving large datasets.\n\n2. Architecture: HBase is designed to run on top of the Hadoop Distributed File System (HDFS) and is built on top of Apache ZooKeeper, which provides coordination and synchronization services. HBase is a distributed system, which means that data is stored and processed across a cluster of machines. HBase uses a master/slave architecture, where the HBase Master coordinates the management of regions, which are portions of a table, and the HBase RegionServers manage the storage and retrieval of data in the regions.\n\n3. API: HBase provides a Java API for accessing data, as well as REST and Thrift APIs for other languages. The Java API allows users to perform CRUD (Create, Read, Update, Delete) operations on data stored in HBase. HBase also supports batch operations, which allow users to perform multiple operations in a single request.\n\n4. Query Language: HBase does not have a query language like SQL, but instead supports filtering and scanning operations. HBase provides filters, which are used to perform server-side filtering on data, and scans, which are used to retrieve a range of rows based on a row key range or a filter.\n\n5. Consistency and Replication: HBase provides strong consistency for read and write operations, which means that data is immediately consistent across all nodes in the cluster. HBase also supports replication, which allows data to be\n\n") }
+<body data-spy="scroll" data-target=".navigation_area">
+
+<!--~~~~~ Start Preloader Area ~~~~~-->
+<div id="preloader">
+    <div class="loader_line"></div>
+</div>
+<!--~./ end prealoader area ~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Site Header
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<header id="header" class="site_header">
+    <!--~~~~~ Start Site Navigarion ~~~~~-->
+    <div class="site_navigation">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navigation_area">
+                        <a class="navbar-brand site_logo" href="index.html">
+                            <span>J</span>ai<span> G</span>anesh
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse mainmenu_area" id="navbarNav">
+                            <ul class="navbar-nav mainmenu">
+                                <li class="nav-item">
+                                    <a class="nav-link smoot_scroll dots_effect active" href="#home"
+                                       data-scroll-nav="0">Home <span class="dot_effect dot_hover"></span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link smoot_scroll dots_effect" href="#about" data-scroll-nav="1">About
+                                        <span class="dot_effect dot_hover"></span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link smoot_scroll dots_effect" href="#contact" data-scroll-nav="6">contact
+                                        <span class="dot_effect dot_hover"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--~./ end site navigation ~-->
+</header>
+<!--~~/. end site header ~~-->
+<div id="sticky_header"></div>
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Site Wrapper
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div class="site_wrapper bg_white">
+    <!--~~~~~ Start Welcome Area ~~~~~-->
+    <section id="home" class="section_scroll welcome_area" data-scroll-index="0">
+        <div class="bg_overlay bg_image page_cover"
+             style="background-image:url('images/bg1.jpg')"></div>
+        <div id="particles-js"></div>
+        <!--~~~~~ Start Home Wrapper Info ~~~~~-->
+        <div class="home_wrapper_info">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="home_text_block text-center">
+                            <h3><span>Hello</span></h3>
+                            <h1 class="cd-headline clip">
+                                <span>I am</span>
+                                <span class="cd-words-wrapper">
+                                        <b class="is-visible">Jai Ganesh</b>
+                                        <b>Developer</b>
+                                        <b>Learner</b>
+                                    </span>
+                            </h1>
+                            <ul class="expart_list">
+                                <li>App developer</li>
+                                <li>Web developer</li>
+                                <li>System seo Engineer</li>
+                            </ul>
+                            <p class="title">Welcome to my website</p>
+                            <ul class="header_social_share">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--~./ end home wrapper info ~-->
+
+
+    </section>
+    <!--~./ end welcome area ~-->
+
+    <!--~~~~~ Start About Area ~~~~~-->
+    <section id="about" class="section_scroll" data-scroll-index="1">
+        <div class="about_area pb-110">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="about_content text-center">
+                            <div class="info">
+                                <img src="https://i.ibb.co/wSc4vtJ/r.png" alt="about">
+                                <h3> Jai Ganesh</h3>
+                                <h5>Full-stack web developer</h5>
+                            </div>
+                            <p>Greetings! I’m Jai Ganesh. I spend my days designing and developing web applications. I
+                                specialize in the Laravel PHP framework on the backend, Vue.js on the frontend and
+                                Tailwind CSS for styling. I have also started a YouTube channel to share other thoughts
+                                on current technology.</p>
+                            <ul class="tag_list">
+                                <li>HTML</li>
+                                <li>css3</li>
+                                <li>Digital Markarting</li>
+                                <li>Bootstrap</li>
+                                <li>PYTHON</li>
+                                <li>REST API</li>
+                                <li>git</li>
+                                <li>Machine learning</li>
+                                <li>Electron</li>
+                                <li>SEO </li>
+                                <li>UI/UX Desiner</li>
+                                <li>FLUTTER</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--~./ end about area ~-->
+
+
+
+
+    <!--~./ certificate ~-->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 ">
+                <div class="section_title text-center">
+                    <h2 class="title"><span>RESUME</span></h2>
+                    <a  href="https://i.ibb.co/KmHz8Rj/jai-ganesh-Resume.jpg" alt="jai-ganesh-Resume">
+                        <img src="https://i.ibb.co/KmHz8Rj/jai-ganesh-Resume.jpg" alt="jai-ganesh-Resume" alt="about">
+                    </a>
                     
-                              
-                             
-
-                       
-
-                } else if ( question.includes(HTMLTags6[i]) ) {    
-
-                       Else = false;
-
-                     if (HTMLTags6[i] === "ZOOKEEPER" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nApache ZooKeeper is a distributed coordination service that provides a centralized infrastructure for managing and synchronizing distributed systems. Here are some key features and components of ZooKeeper:\n\n1. Distributed Configuration: ZooKeeper provides a centralized configuration management system that allows distributed applications to store and retrieve configuration data. This eliminates the need for each node in a distributed system to maintain its own configuration files, making it easier to manage configuration changes.\n\n2. Naming Service: ZooKeeper provides a hierarchical naming service that allows distributed applications to register and look up names, such as the location of a service or the name of a node in a distributed system.\n\n3. Synchronization: ZooKeeper provides a mechanism for distributed applications to synchronize their operations. ZooKeeper can be used to implement distributed locks, which ensure that only one application can access a resource at a time.\n\n4. Leader Election: ZooKeeper can be used to elect a leader among a group of nodes. This is useful for distributed systems where only one node should be performing a certain task at any given time.\n\n5. Watchers: ZooKeeper provides a mechanism for distributed applications to receive notifications when certain events occur, such as changes to configuration data or the presence of a new node in the system. These notifications, called watchers, allow applications to respond to changes in the system in real-time.\n\n6. Quorum: ZooKeeper is designed to be highly available and fault-tolerant. To achieve this, ZooKeeper requires a quorum of nodes to be available to process requests. A quorum is a majority of nodes in a cluster, and ZooKeeper uses a consensus protocol to ensure that all nodes in the quorum agree on the state of the system.\n\nIn summary, ZooKeeper is a distributed coordination service that provides a centralized infrastructure for managing and synchronizing distributed systems. It provides features such as distributed configuration, naming service, synchronization, leader election, watchers, and quorum to enable distributed systems to function efficiently and reliably.\n\n") }
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--~./ end  ~-->
 
 
-                      if (HTMLTags6[i] === "IS BIG DATA" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nBig Data refers to extensive and often complicated data sets so huge that they’re beyond the capacity of managing with conventional software tools. Big Data comprises unstructured and structured data sets such as videos, photos, audio, websites, and multimedia content.\n\nBusinesses collect the data they need in countless ways, such as:\n\nInternet cookies\nEmail tracking\nSmartphones\nSmartwatches\nOnline purchase transaction forms\nWebsite interactions\nTransaction histories\nSocial media posts\nThird-party trackers -companies that collect and sell clients and profitable data\nWorking with big data involves three sets of activities:\nIntegration: This involves merging data often from different sources – and molding it into a form that can be analysed in a way to provide insights.\n\nManagement: Big data must be stored in a repository where it can be collected and readily reached. The largest amount of Big Data is unstructured, causing it ill-suited for conventional relational databases, which need data in tables-and-rows format.\n\nAnalysis: The Big Data investment return is a spectrum of worthy market insights, including details on buying patterns and customer choices. These are represented by examining large data sets with tools driven by AI and machine learning.\n\n") }
+        <!--~./ certificate ~-->
+        <div class="container" style="margin-top: 20px;">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <div class="section_title text-center">
+                        <h3 ><span>Certificate</span></h3>
+                        <h2 class="title"><span></span></h2>
+                        <img src="https://i.ibb.co/RC4dNQ9/Whats-App-Image-2024-09-21-at-10-46-11-PM.jpg" alt="about">
+                    </div>
+                </div>
+
+                <div class="col-lg-12 ">
+                    <div class="section_title text-center">
+                        <h3><span>Certificate</span></h3>
+                        <h2 class="title"><span></span></h2>
+                        <img src="https://i.ibb.co/jZwT4Xt/Whats-App-Image-2024-09-21-at-10-46-09-PM.jpg" alt="about">
+                    </div>
+                </div>
 
 
 
-                             if (HTMLTags6[i] === "5 V" || HTMLTags6[i] === "5V")  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nVolume: A considerable amount of data stored in data warehouses reflects the volume. The data may reach random heights; these large volumes of data need to be examined and processed. Which may exist up to or more than terabytes and petabytes.\n\nVelocity: Velocity basically introduces the pace at which data is being produced in real-time. To give a simple example for recognition, imagine the rate at which Facebook, Instagram, or Twitter posts are generated per second, an hour or more.\n\nVariety:  Big Data comprises structured, unstructured, and semi-structured data collected from varied sources. This different variety of data requires very different and specific analyzing and processing techniques with unique and appropriate algorithms.\n\nVeracity: Data veracity basically relates to how reliable the data is, or in a fundamental way, we can define it as the quality of the data analyzed.\n\nValue: Raw data is of no use or meaning but once converted into something valuable. We can extract helpful information.\n\n") }
-                                if (HTMLTags6[i] === "ADVANTAGE" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nIrrespective of the division and scope of the firm, data is now an essential tool for businesses to utilise. Companies are frequently using big data to gain a competing edge over business rivals.\n\nChecking the datasets a company collects is just one part of the big data process. Big data professionals also need to know what the company requires from the application and how they plan to use the data to their advantage.\n\nConfident decision-building: Analytics aims to develop decision building, and big data endures to sustain this. Big data can help enterprises speed up their decision-making method with so much data available while still being assured of their choice. Nowadays, moving fast and reacting to broader trends and operational changes is a huge business benefit in a quick-paced society.\n\nAsset optimisation: Big data signifies that businesses can control assets at a personal level. This implies they can adequately optimise assets depending on the data source, improve productivity, extend the lifespan of help, and reduce the downtime some assets may require. This gives a competing advantage by assuring the company is getting the most out of its assets and links with decreasing costs.\n\nCost reduction: Big data can support businesses to reduce their outgoings. From analysing energy usage to assessing the effectiveness of staff operating patterns, data collected by companies can help them recognise where they can make cost savings without having a negative impact on company operations.\n\nImprove customer engagement: When surveying online, consumers make confident choices indicating their decisions, habits, and tendencies that can then be used to develop and tailor consumer dialogue, which could then be interpreted into increased sales. Understanding what each client is looking for through the data collected on them means you can target them with specific products, but it also gives a personal feel that many consumers today have come to await.\n\nIdentify new revenue streams: Analytics can further assist companies in identifying new revenue streams and expanding into other areas. For example, knowing customer trends and decisions allow firms to decide the way they should go. The data companies accumulate can also likely be sold, adding income streams and the potential to build alliances with other businesses.\n\n") }
-                                    if (HTMLTags6[i] === "UNIT 2" || HTMLTags6[i] === "UNIT2")  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nBIG DATA UNIT 2 ALL QUESTIONS\n\n1.WRITE A SHORT NOTE ON DECAYING WINDOWS ALGORITHM\n2.WHAT DOES REAL TIME ANALYTICS PLATFORM MEAN\n3.EXPLAIN THE DATA STREAMING CONCEPT IN DETAIL\n4.EXPLAIN WITH A NEAT DIAGRAM ABOUT STREAM  DATA MODEL AND ITS ARCHITECTURE\n5.EXPLAIN FILTERING A STREAM IN DETAIL \n6.EXPLAIN THE CONCEPT OF ESTIMATING MOMENTS\n7.EXPLAIN IN DETAIL ON COUNTING ONES IN A WINDOW\n\n8.EXPLAIN THE FOLLOWING \n1.DECAYING WINDOWS\n2.RTAP APPLICATIONS\n\n9.EXPLAIN ABOUT CASE STUDY STOCK MARKET PREDICTION\n10.EXPLAIN ABOUT CASE STUDY REAL TIME SENTIMENT ANALYSIS \n\n") }
-                                        if (HTMLTags6[i] === "UNIT 3" || HTMLTags6[i] === "UNIT3")  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nBIG DATA UNIT 3  ALL QUESTIONS\n\n1.WRITE SHORT NOTES ON INTRODUCTION TO BIG DATA\n\n2.WRITE THE DIFFERENCES BETWEEN DATA WAREHOUSE AND HADOOP\n\n3.EXPLAIN THE CHARACTERISTICS OF BIG DATA\n\n4.WRITE THE IMPORTANCE OF BIG DATA\n\n5.BRIEFLY EXPLAIN ABOUT BIG DATA USE CASES\n\n6.BRIEFLY EXPLAIN ABOUT APPLICATION DEVELOPMENT IN HADOOP\n\n") }
-                                        if (HTMLTags6[i] === "UNIT 4" ||HTMLTags6[i] === "UNIT4" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nBIG DATA UNIT 4 ALL QUESTIONS\n\n1.DISCUSS THE COMPONENTS OF THE HADOOP\n\n2.EXPLAIN THE HADOOP DISTRIBUTED FILE SYSTEM WITH A NEAT DIAGRAM\n\n3.EXPLAIN YARN WITH ITS COMPONENTS\n\n4.DISCUSS THE VARIOUS BENEFITS OF HADOOP\n\n5.HOW TO ANALYZE THE DATA WITH HADOOP EXPLAIN\n\n6.WRITE A SHORT NOTE ON SCALING OUT\n\n7.EXPLAIN HADOOP STREAMING IN DETAIL\n\n8.EXPLAIN THE WORKING PROCESS OF HADOOP STREAMING\n\n9.EXPLAIN JAVA INTERFACES TO HDFS BASICS\n\n10.HOW TO DEVELOP A NAPREDUCE APPLICATION EXPLAIN\n\n11.EXPLAIN THE WORKING PROCESS OF MAPREDUCE \n\n12.DISCUSS THE ADVANTAGES AND DISADVANTAGE OF MAPREDUCE\n\n13.EXPLAIN THE ANATOMY OF A MAPREDUCE JOP RUN \n\n14.EXPLAIN THE HADOOP SCHEDULERS WITH ITS TYPES \n\n15.DISCUSS MAPREDUCE TYPES AND FORMATS\n\n16.DISCUSS THE  VARIOUS FEATURES OF MAPREDUCE\n\n17.EXPLAIN THE HADOOP ENVIRONMENT\n\n") }
-                                        
+
+                    <div class="col-lg-12 ">
+                        <div class="section_title text-center">
+                            <h3><span>Certificate</span></h3>
+                            <h2 class="title"><span></span></h2>
+                            <img src="https://i.ibb.co/LSKwzM5/Whats-App-Image-2024-09-21-at-10-46-13-PM.jpg" alt="about">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--~./ end  ~-->
+    
+
+    
 
 
-               } else if ( question.includes(HTMLTags7[i]) ) {
+    <!--~~~~~ Start Contact Area ~~~~~-->
+    <section wire:id="VkzvT7R9PiMfII1Nx4X1" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;VkzvT7R9PiMfII1Nx4X1&quot;,&quot;name&quot;:&quot;contact-form&quot;,&quot;locale&quot;:&quot;en&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;6cd65db1&quot;,&quot;data&quot;:{&quot;name&quot;:null,&quot;email&quot;:null,&quot;message&quot;:&quot;&quot;,&quot;subject&quot;:null},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;f769efabba709b401515d65e26345bc938952968150ba6b222f184078530f365&quot;}}" class="contact_area section_scroll bg_gray ptb-110" data-scroll-index="6">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section_title text-center">
+                    <h3><span>contact</span></h3>
+                    <h2 class="title">Get In <span>Touch.</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <!--~~~~~ Start Single Contact Info ~~~~~-->
+                <div class="single_contact_info">
+                    <span class="fa fa-phone"></span>
+                    <div class="info">
+                        <h4>Phone : </h4>
+                        <p>+91 8220 607843</p>
+                    </div>
+                </div><!--~./ end single contact info~-->
+                <!--~~~~~ Start Single Contact Info ~~~~~-->
+                <div class="single_contact_info">
+                    <span class="fa fa-map-marker"></span>
+                    <div class="info">
+                        <h4>Location : </h4>
+                        <p>No25,First Cross st,Omakulam,Sivasakthi Nagar,Dhidambaram, C.Thandeswaranallur,Tamil Nadu 608001</p>
+                    </div>
+                </div><!--~./ end single contact info~-->
+                <!--~~~~~ Start Single Contact Info ~~~~~-->
+                <div class="single_contact_info">
+                    <span class="fa fa-envelope"></span>
+                    <div class="info">
+                        <h4>Email : </h4>
+                        <p>jaigaensh000pe@gmail.com</p>
+                    </div>
+                </div><!--~./ end single contact info~-->
+            </div>
+            <div class="col-lg-6">
+                <form class="form" wire:submit.prevent="submit" novalidate>
+                    <div class="row">
+                        <div class="col-md-6 pt_right">
+                            <div class="form-group">
+                                <input class="form-controller" placeholder="Name"
+                                       wire:model="name"
+                                       type="text">
+                                                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-controller" placeholder="Email"
+                                       wire:model="email"
+                                       type="email">
+                                                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input class="form-controller"
+                                       wire:model="subject"
+                                       placeholder="Subject" type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                    <textarea class="form-controller"
+                                              wire:model="message"
+                                              placeholder="Message"></textarea>
+                                                            </div>
+                                                    </div>
 
-                Else = false;
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-default btn-sumbit"><span>Send</span></button>
+                        </div>
+                    </div>
+                </form>
+                            </div>
+        </div>
+    </div>
+</section>
+</livewire:contact-form>
+    <!--~./ end contact area~~-->
+</div>
+<!--~~/. end site wrapper ~~-->
 
-               if (HTMLTags7[i] === "UNIT 5" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\nBIG DATA UNIT 5 ALL QUESTION\n\n1.DISCUSS THE APPLICATION ON BIG DATA USING PIG\n\n2.EXPLAIN THE FEATURES OF PIG\n\n3.EXPLAIN THE APPLICATIONS ON BIG DATA USING HIVE\n\n4.EXPLAIN THE CHARACTERISTICS AND FEATURES OF HIVE\n\n5.DISCUSS THE DIFFERENCES BETWEEN HIVE AND PIG \n\n6.EXPLAIN THE DATA PROCESSING OPERATORS IN PIG\n\n7.EXPLAIN THE HIVE SERVICES\n\n8.EXPLAIN IN DETAIL ABOUT HIVE METASTORE\n\n9.DISCUSS HIVEQL IN DETAIL\n\n10.EXPLAIN THE FUNDAMENTALS OF HBASE\n\n11.EXPLAIN ABOUT THE ZOOKEEPER\n\n12.DISCUSS THE SERVICES PROVIDED BY ZOOKEEPER\n\n13.EXPLAIN IBM LNFOSPHERE BIGINSIGHTS AND STREAM \n\n") }
-               if (HTMLTags7[i] === "UNIT" || HTMLTags7[i] === "ALL QUESTIONS" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\n(-------BIG DATA UNIT 1 ALL QUESTIONS--------)\n\n\n1.WRITE SHORT NOTES ON HISTORY OF BIG DATA\n\n2.EXPLAIN ABOUT THE TYPE OF BIG DATA\n\n3.WHAT IS BIG DATA PLATFORM\n\n4.EXPLAIN ABOUT THE FEATURES OF BIG DATA PLATFORM\n\n5.EXPLAIN BRIEFLY ABOUT THE LIST OF BID DATA PLATFORM\n\n6.WRITE SHORT NOTES ON OPEN SOUERCE BIG DATA PLATFORM\n\n7.EXPLAIN IN DETAIL ABOUT STORAGE CONSIDERATION IN BIG DATA\n\n8.EXPLAIN ABOUT THE LIST OF CHALLENGES OF CONVENTIONAL SYSTEM\n\n9.WHAT ARE THE OTHER THREE CHALLENGES OF CONVENTIONAL SYSTEM EXPLAIN BRIEFLY\n\n10.WHAT ARE THE MOST IMPORTANT CHALLENGES OF THE BIG DATA\n\n11.WRITE SHORT NOTES ON IDA\n\n12.EXPLAIN IN DETAIL ABOUT NATURE OF DATA AND ITS APPLICATIONS \n\n13.EXPLAIN ABOUT THE CHALLENGES WITH BIG DATA \n\n14.EXPLAIN BRIEFLY ABOUT THE OTHER CHARACTERISTICS OF DATA\n\n15.EXPLAIN ABOUT THE TYPE OF ANALYTIC PROCESSES AND TOOLS\n\n16.HOW WE COMMPARE ANALYSIS WITH REPORTING \n\n\n(-------BIG DATA UNIT 2 ALL QUESTIONS--------)\n\n1.WRITE A SHORT NOTE ON DECAYING WINDOWS ALGORITHM\n\n2.WHAT DOES REAL TIME ANALYTICS PLATFORM MEAN\n\n3.EXPLAIN THE DATA STREAMING CONCEPT IN DETAIL\n\n4.EXPLAIN WITH A NEAT DIAGRAM ABOUT STREAM  DATA MODEL AND ITS ARCHITECTURE\n\n5.EXPLAIN FILTERING A STREAM IN DETAIL \n\n6.EXPLAIN THE CONCEPT OF ESTIMATING MOMENTS\n\n7.EXPLAIN IN DETAIL ON COUNTING ONES IN A WINDOW\n\n8.EXPLAIN THE FOLLOWING \n1.DECAYING WINDOWS\n2.RTAP APPLICATIONS\n\n9.EXPLAIN ABOUT CASE STUDY STOCK MARKET PREDICTION\n\n10.EXPLAIN ABOUT CASE STUDY REAL TIME SENTIMENT ANALYSISn\n\n\n(--------BIG DATA UNIT 3 ALL QUESTIONS----------)\n\n1.WRITE SHORT NOTES ON INTRODUCTION TO BIG DATA\n\n2.WRITE THE DIFFERENCES BETWEEN DATA WAREHOUSE AND HADOOP\n\n3.EXPLAIN THE CHARACTERISTICS OF BIG DATA\n\n4.WRITE THE IMPORTANCE OF BIG DATA\n\n5.BRIEFLY EXPLAIN ABOUT BIG DATA USE CASES\n\n6.BRIEFLY EXPLAIN ABOUT APPLICATION DEVELOPMENT IN HADOOP \n\n\n(-----------BIG DATA UNIT 4 ALL QUESTIONS-------------)\n\n1.DISCUSS THE COMPONENTS OF THE HADOOP\n\n2.EXPLAIN THE HADOOP DISTRIBUTED FILE SYSTEM WITH A NEAT DIAGRAM\n\n3.EXPLAIN YARN WITH ITS COMPONENTS\n\n4.DISCUSS THE VARIOUS BENEFITS OF HADOOP\n\n5.HOW TO ANALYZE THE DATA WITH HADOOP EXPLAIN\n\n6.WRITE A SHORT NOTE ON SCALING OUT\n\n7.EXPLAIN HADOOP STREAMING IN DETAIL\n\n8.EXPLAIN THE WORKING PROCESS OF HADOOP STREAMING\n\n9.EXPLAIN JAVA INTERFACES TO HDFS BASICS\n\n10.HOW TO DEVELOP A NAPREDUCE APPLICATION EXPLAIN\n\n11.EXPLAIN THE WORKING PROCESS OF MAPREDUCE \n\n12.DISCUSS THE ADVANTAGES AND DISADVANTAGE OF MAPREDUCE\n\n13.EXPLAIN THE ANATOMY OF A MAPREDUCE JOP RUN \n\n14.EXPLAIN THE HADOOP SCHEDULERS WITH ITS TYPES \n\n15.DISCUSS MAPREDUCE TYPES AND FORMATS\n\n16.DISCUSS THE  VARIOUS FEATURES OF MAPREDUCE\n\n17.EXPLAIN THE HADOOP ENVIRONMENT\n\n\n(--------------BIG DATA UNIT 5 ALL QUESTION----------------)\n\n1.DISCUSS THE APPLICATION ON BIG DATA USING PIG\n\n2.EXPLAIN THE FEATURES OF PIG\n\n3.EXPLAIN THE APPLICATIONS ON BIG DATA USING HIVE\n\n4.EXPLAIN THE CHARACTERISTICS AND FEATURES OF HIVE\n\n5.DISCUSS THE DIFFERENCES BETWEEN HIVE AND PIG \n\n6.EXPLAIN THE DATA PROCESSING OPERATORS IN PIG\n\n7.EXPLAIN THE HIVE SERVICES\n\n8.EXPLAIN IN DETAIL ABOUT HIVE METASTORE\n\n9.DISCUSS HIVEQL IN DETAIL\n\n10.EXPLAIN THE FUNDAMENTALS OF HBASE\n\n11.EXPLAIN ABOUT THE ZOOKEEPER\n\n12.DISCUSS THE SERVICES PROVIDED BY ZOOKEEPER\n\n13.EXPLAIN IBM LNFOSPHERE BIGINSIGHTS AND STREAM\n\n") }
-               if (HTMLTags7[i] === "" )  { setTimeout(botSays, 3, "\nAIG-_-CHAT :\n\n\n\n") } 
 
-                }/* else if ( question.includes(HTMLTags8[i]) ) {
+<!--~~~~~ Start Section Sroller Button ~~~~~-->
+<div id="section_scroller_button">
+    <span class="fa fa-angle-down"></span>
+</div><!--/#section_scroller_button-->
 
-                } else if ( question.includes(HTMLTags9[i]) ) {    */
-                
 
-                 else if (question.includes(Questions[i])) {
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Site Footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<footer id="footer" class="footer section_scroll">
+    <div class="footer-widgets-area ptb-80">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="footer_description text-center">
+                        <a class="footer_logo site_logo" href="index-2.html"> <span>J</span>ai<span> G</span>anesh</a>
+                        <p>If you’re looking to get in contact with me for business inquiries or if you have a question about me and my profession, feel free to email me. I’ll try to respond as soon as I can.</p>
+                        <!-- Footer Social Share -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End footer widgets area -->
 
-                    Else = false; if (Questions[i].includes("HTML")) { setTimeout(botSays, 3, "\n\nAIG-_-CHAT : HTML (Hypertext Markup Language) is a markup language used for creating and structuring content on the internet. It is the standard language used for creating web pages and other types of online content. HTML code is written using tags, which are special keywords enclosed in angle brackets, and these tags define the structure and content of a web page.\n\nHTML allows web developers to create web pages with text, images, links, and other types of multimedia content. It also allows for the creation of forms, tables, and other interactive elements that users can interact with on a web page. HTML is often used in conjunction with CSS (Cascading Style Sheets) and JavaScript to create dynamic and visually appealing web pages.\n\n") } else { setTimeout(botSays, 3, "\n\nAIG-_-CHAT : CSS (Cascading Style Sheets) is a style sheet language used to describe the presentation of a document written in HTML or XML (including XML dialects like SVG or XHTML). CSS is used to style and layout web pages, and it allows web designers to separate the presentation of a document from its content.\nCSS code consists of rules that specify how HTML elements should be displayed, including properties like color, font, spacing, and layout. These rules can be applied to individual HTML elements or to groups of elements, and they can be defined within an HTML document or in an external CSS file.\nCSS provides a wide range of tools and features for creating visually appealing and responsive web pages, including the ability to define different styles for different devices and screen sizes. CSS is a critical component of modern web design and development, and it is essential for creating websites that look great and function well on a variety of devices and platforms.\n\n") }
+    <div class="footer-bottom-area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright">
+                        <p>&copy; 2024 Copyright <a href="index.html">jaiganesh.com</a>
+                            All rights
+                            reserved.</p>
+                    </div><!-- Copyright Text -->
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--~~/. end site footer ~~-->
 
-                } else if ( question.includes(Greeting[i]) ) {
-
-                    Else = false; if (Greeting[i].includes("HOW")&&Greeting[i].includes("YOU")) {
-
-                    var reactHello = "How am I";
-
-                    var reactGreeting = "I would say I am 40% complete." }
-
-                    else {
-
-                   num = Math.ceil(Math.random()*3)
-
-                    var reactHello = Greeting[num]
-
-                    reactHello = reactHello.toLowerCase();
-
-                    reactHello = reactHello.charAt(0).toUpperCase() + reactHello.slice(1);
-
-                    var reactGreeting = "Same old. Getting coded mostly.";
-
-                    }
-
-                    var reactPleasant = BotPleasant[num]
-
-                    setTimeout(botSays, 3, "\nAIG-_-CHAT : " + reactHello + ". " + reactGreeting + " " + reactPleasant )
-
-                  } else if (question.includes(Hello[i])) {
-
-                  var reactHello = Hello[i];
-
-                  reactHello = reactHello.toLowerCase();
-
-                  reactHello = reactHello.charAt(0).toUpperCase() + reactHello.slice(1);
-
-                  var reactGreeting = "";
-
-                  var reactPleasant = ""
-
-                    Else = false;
-
-                      setTimeout(botSays, 3, "\nAIG-_-CHAT : " + reactHello + ".")
-
-                } else { } }  setTimeout( function() { if (Else === true) {botSays("\n\nAIG-_-CHAT : I'm sorry, but I'm not sure what you are asking. Could you please provide more information or clarify your question?"); } } , 700);  setTimeout( function() {Else = true; botChat.scrollTop = botChat.scrollHeight;}, 730)
-
-            } function botSays(x) {
-
-                document.getElementsByTagName("textarea")[0].innerHTML += x;
-
-            } function youSay(x) { botSays("\n"+ you + "  : " + x+"\n")
-
+<!-- jQuery javascripts -->
+<script src="js/vendor/jquery-v3.2.1.min.js"></script>
+<!-- Bootstrap javascrits -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Popper javascrits -->
+<script src="js/popper.min.js"></script>
+<!-- Plugins javascrits -->
+<script src="js/plugins.js"></script>
+<!-- Plugins Appear -->
+<script src="js/jquery.appear.js"></script>
+<!-- Main scripts -->
+<script src="js/main.js"></script>
+<script type="text/javascript">
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 160,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 1,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 4,
+                    "size_min": 0.3,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": false,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 1,
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 600
+                }
             }
-
-            function youDo(x) { botSays("\n"+ you + " " + x)                                            
-
-            } function enterButton(e, x) { if (e.keyCode == 13) { answer(x); }   }   
-
-         
-
- </script>
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "bubble"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 250,
+                    "size": 0,
+                    "duration": 2,
+                    "opacity": 0,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 400,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+</script>
+<script src="livewire/livewire6fc1.js?id=a4a06c089f1a93dbe075" data-turbolinks-eval="false"></script><script data-turbolinks-eval="false">if (window.livewire) {console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')}window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'X1QUGG5q8SquG3NmXj0kU2ijFc0OPgP1FGJzgczT';/* Make Alpine wait until Livewire is finished rendering to do its thing. */window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};document.addEventListener("DOMContentLoaded", function () {window.livewire.start();});</script>
 </body>
+
+<!-- Mirrored from www.mahesvaran.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 17 Mar 2024 09:13:54 GMT -->
 </html>
