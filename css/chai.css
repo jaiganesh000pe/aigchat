@@ -1,0 +1,578 @@
+:root {
+    --chai-purple: #1D0C2E;
+    --chai-blue: #5101FE;
+    --chai-mauve: #A502FC;
+    --chai-rose: #FD57AD;
+    --chai-pink: #FF00FD;
+    --chai-yellow: #FDAB55;
+    --chai-white: #FFFFFF;
+    --chai-black: #000000;
+    /* Used to scale design specs to smaller screens */
+    --base-width: 1680;
+    --base-height: 1554;
+    --width-ratio: calc(100vw / var(--base-width));
+    --height-ratio: calc(100vh / var(--base-height));
+}
+
+@font-face {
+    font-family: BeatriceRegular;
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/Beatrice Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: BeatriceThin;
+    src: url("../fonts/Beatrice Thin.otf") format("opentype");
+}
+
+a {
+    all: unset;
+}
+
+.mobile-break {
+    display: none;
+}
+
+body {
+    background-color: var(--chai-purple);
+    display: flex;
+    font-family: BeatriceRegular;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    color: var(--chai-white);
+    font-size: calc(86 * var(--height-ratio));
+    font-family: BeatriceThin;
+    font-weight: 250;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+h2 {
+    color: var(--chai-white);
+    font-size: calc(46 * var(--height-ratio));
+    font-weight: 300;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.chai-button {
+    align-items: center;
+    border-radius: 115px;
+    color: var(--chai-white);
+    cursor: pointer;
+    display: flex;
+    height: 56px;
+    font-size: 18px;
+    font-weight: 600;
+    justify-content: center;
+    width: 282px;
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.chai-button:hover {
+    background-color: var(--chai-white);
+    color: var(--chai-black);
+}
+
+.chai-button-blue {
+    background-color: var(--chai-blue);
+}
+
+.chai-button-pink {
+    background-color: var(--chai-pink);
+}
+
+.chai-button-rose {
+    background-color: var(--chai-rose);
+}
+
+.chai-fold {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    padding-bottom: calc(200 * var(--height-ratio));
+}
+
+.chai-copy-500 {
+    font-weight: 500;
+    line-height: 1;
+    font-size: 30px;
+}
+
+.chai-copy-medium {
+    transition: color 0.2s ease;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+}
+
+.chai-header {
+    display: flex;
+    height: calc(222 * var(--height-ratio));
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: calc(100 * var(--height-ratio));
+}
+
+.chai-logo {
+    color: var(--chai-white);
+    padding-left: calc(80 * var(--width-ratio));
+}
+
+.chai-navbar {
+    display: flex;
+    height: calc(122 * var(--height-ratio));
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.chai-navbar-row {
+    border-bottom: 0.1px solid white;
+    cursor: pointer;
+}
+
+.chai-navbar-row-0 {
+    border-bottom-color: var(--chai-blue);
+}
+
+.chai-navbar-row-1 {
+    border-bottom-color: var(--chai-mauve);
+}
+
+.chai-navbar-row-2 {
+    border-bottom-color: var(--chai-pink);
+}
+
+.chai-navbar-row-3 {
+    border-bottom-color: var(--chai-rose);
+}
+
+.chai-navbar-row-4 {
+    border-bottom-color: var(--chai-yellow);
+}
+
+.chai-navbar-label {
+    color: var(--chai-white);
+    padding-bottom: calc(5 * var(--height-ratio));
+    padding-top: calc(5 * var(--height-ratio));
+    padding-right: calc(60 * var(--width-ratio));
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+}
+
+.chai-navbar-label:hover {
+    opacity: 0.5;
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+}
+
+.chai-hero {
+    flex: 1;
+    min-height: 0;
+}
+
+.chai-blurb {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chai-blurb-header,
+.chai-blurb-subheader {
+    text-align: center;
+}
+
+.chai-blurb-header {
+    display: block;
+    margin-top: calc(100 * var(--height-ratio));
+    margin-bottom: calc(30 * var(--height-ratio));
+}
+
+/* Apply to latter two header rows, necessary to make style work
+ * across desktop + mobile */
+
+.chai-blurb-header-row:nth-last-child(-n+2) {
+    display: inline-block;
+}
+
+.chai-blurb-header-row:last-child {
+    margin-left: 7.5px;
+}
+
+.chai-blurb-subheader {
+    margin-top: calc(30 * var(--height-ratio));
+    margin-bottom: calc(80 * var(--height-ratio));
+}
+
+.chai-block {
+    color: var(--chai-white);
+    font-size: 38px;
+    transition: color 0.2s ease;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+}
+
+.chai-block-header {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: calc(40 * var(--height-ratio));
+    padding-bottom: calc(40 * var(--height-ratio));
+    padding-left: calc(80 * var(--width-ratio));
+    padding-right: calc(80 * var(--width-ratio));
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.chai-arrow {
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    background-color: white;
+    mask: url("../img/chai-arrow.svg") no-repeat center;
+    -webkit-mask: url("../img/chai-arrow.svg") no-repeat center;
+    -moz-mask: url("../img/chai-arrow.svg") no-repeat center;
+    height: 55px;
+    width: 55px;
+}
+
+.chai-block-1 {
+    border-top: solid 1px var(--chai-blue);
+}
+
+.chai-block-1-header:hover {
+    color: var(--chai-mauve);
+}
+
+.chai-block-1-header:hover .chai-arrow {
+    background-color: var(--chai-mauve);
+}
+
+.chai-block-2 {
+    border-top: solid 1px var(--chai-mauve);
+}
+
+.chai-block-2-header:hover {
+    color: var(--chai-pink);
+}
+
+.chai-block-2-header:hover .chai-arrow {
+    background-color: var(--chai-pink);
+}
+
+.chai-block-3 {
+    border-top: solid 1px var(--chai-pink);
+}
+
+.chai-block-3-header:hover {
+    color: var(--chai-rose);
+}
+
+.chai-block-3-header:hover .chai-arrow {
+    background-color: var(--chai-rose);
+}
+
+.chai-block-4 {
+    border-top: solid 1px var(--chai-rose);
+    border-bottom: solid 1px var(--chai-yellow);
+}
+
+.chai-block-4-header:hover {
+    color: var(--chai-yellow);
+}
+
+.chai-block-4-header:hover .chai-arrow {
+    background-color: var(--chai-yellow);
+}
+
+.chai-block-expanded {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: height 1s cubic-bezier(0, 1, 0, 1);
+    -webkit-transition: height 1s cubic-bezier(0, 1, 0, 1);
+    -moz-transition: height 1s cubic-bezier(0, 1, 0, 1);
+}
+
+.chai-block>input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+}
+
+.chai-block>input[type="checkbox"]:checked~.chai-block-expanded {
+    max-height: 100px;
+    overflow-y: visible;
+}
+
+.chai-block>input[type="checkbox"]:checked~label .chai-arrow {
+    rotate: -90deg;
+}
+
+.chai-block-1-expanded {
+    padding-left: calc(80 * var(--width-ratio));
+}
+
+.chai-block>input[type="checkbox"]:checked~.chai-block-1-expanded {
+    max-height: 728px;
+    overflow-y: visible;
+    padding-top: min(200px, 200 * var(--height-ratio));
+    padding-bottom: calc(60 * var(--height-ratio));
+}
+
+.chai-block-1-expanded-image {
+    margin-right: -130px;
+}
+
+.chai-block-blurb {
+    font-family: BeatriceThin;
+    font-size: 30px;
+    font-weight: 250;
+    width: calc(840 * var(--width-ratio));
+}
+
+.chai-block-blurb-inner {
+    margin-bottom: 40px;
+}
+
+.chai-block-2-expanded {
+    padding-right: calc(80 * var(--width-ratio));
+}
+
+.chai-block>input[type="checkbox"]:checked~.chai-block-2-expanded {
+    max-height: 1000px;
+    overflow-y: hidden;
+    padding-top: min(160px, 160 * var(--height-ratio));
+    padding-bottom: calc(60 * var(--height-ratio));
+}
+
+.chai-block-2-expanded-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-left: -85px;
+    margin-bottom: -216px;
+}
+
+.chai-block-2-expanded .chai-block-blurb {
+    padding-top: min(40px, 40 * var(--height-ratio));
+}
+
+.chai-block>input[type="checkbox"]:checked~.chai-block-3-expanded {
+    max-height: 550px;
+    overflow-y: visible;
+    padding-top: min(80px, 80 * var(--height-ratio));
+    padding-bottom: min(80px, 80 * var(--height-ratio));
+}
+
+.chai-block-3-expanded {
+    padding-left: calc(80 * var(--width-ratio));
+    /* Different due to extra right margin on waves image */
+    padding-right: calc(45 * var(--width-ratio));
+}
+
+.chai-block-research {
+    background-image: url("../img/chai-research.svg");
+    background-repeat: round;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 420px;
+    width: 100%;
+}
+
+.chai-block-research-float {
+    align-items: center;
+    background-color: var(--chai-purple);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 56px;
+    padding-right: 46px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+.chai-block-research-blurb {
+    font-family: BeatriceThin;
+    font-weight: 250;
+    font-size: 30px;
+    padding-right: 56px;
+}
+
+.chai-block>input[type="checkbox"]:checked~.chai-block-4-expanded {
+    max-height: 1500px;
+    overflow-y: visible;
+    padding-top: min(80px, 80 * var(--height-ratio));
+    padding-bottom: min(90px, 80 * var(--height-ratio));
+}
+
+.chai-block-4-expanded {
+    gap: min(64px, 64 * var(--width-ratio));
+    display: flex;
+    flex-direction: row;
+}
+
+.chai-block-4-expanded-image {
+    background-image: url(../img/chai-openings.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: calc(414 / 865 * 100vw / 2);
+    flex: 50%;
+}
+
+.chai-block-openings {
+    flex: 50%;
+    gap: min(115px, 115 * var(--width-ratio));
+}
+
+.chai-block-opening .chai-button {
+    width: 222px;
+}
+
+.chai-block-openings {
+    display: flex;
+    flex-direction: row;
+    padding-top: min(60px, 60 * var(--height-ratio));
+}
+
+.chai-block-opening-title {
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: min(50px, 50 * var(--height-ratio));
+}
+
+.chai-block-opening-location {
+    font-family: BeatriceThin;
+    font-size: 18px;
+    margin-bottom: min(50px, 50* var(--height-ratio));
+}
+
+.chai-footer {
+    color: var(--chai-white);
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    margin-bottom: 50px;
+    padding-top: calc(75 * var(--height-ratio));
+}
+
+.chai-footer .chai-logo {
+    flex: 50%;
+}
+
+.chai-links {
+    display: flex;
+    flex: 50%;
+}
+
+.chai-links-block {
+    border-left: 1px solid var(--chai-yellow);
+    padding-left: 28px;
+}
+
+.chai-links-block-title {
+    font-weight: 600;
+    margin-bottom: min(20px, 20 * var(--height-ratio));
+}
+
+.chai-links-block-contact,
+.chai-links-block-phone {
+    margin-bottom: min(56px, 56 * var(--height-ratio));
+}
+
+.chai-links-block-row {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+}
+
+.chai-links-block-row:hover {
+    opacity: 0.5;
+}
+
+.chai-footer-navbar {
+    margin-left: 37px;
+}
+
+.chai-footer-navbar .chai-links-block-row {
+    margin-bottom: min(20px, 20 * var(--height-ratio));
+}
+
+.chai-disclaimer {
+    color: var(--chai-white);
+    display: flex;
+    font-size: 12px;
+    font-weight: 400;
+    padding-left: min(80px, 80 * var(--width-ratio));
+    padding-bottom: 50px;
+    letter-spacing: 0.05em;
+}
+
+.chai-disclaimer-entry {
+    opacity: 0.6;
+    margin-right: 40px;
+}
+
+.chai-disclaimer-links {
+    display: flex;
+}
+
+.chai-disclaimer-link {
+    cursor: pointer;
+}
+
+/* Firefox-specific hack for bug-fixes */
+
+@supports (-moz-appearance:meterbar) and (display:flex) {
+    /* border-repeat: round doesn't work */
+    .chai-block-research {
+        background-size: auto 420px;
+        background-repeat: unset;
+        width: 100%;
+    }
+    /* fix weird artifact when rotating arrow */
+    .chai-arrow:after {
+        border: 1px solid var(--chai-purple);
+        content: "&nbsp;";
+        display: inline-block;
+        height: 55px;
+        overflow: hidden;
+        width: 55px;
+    }
+}
+
+@supports (-ms-ime-align:auto) {
+    .chai-block-research {
+        background-size: auto 420px;
+        background-repeat: unset;
+        width: 100%;
+    }
+}

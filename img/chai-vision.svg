@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="44.7698 12.6316 569.2872 569.6334" width="569.2872" height="569.6334">
+  <defs/>
+  <metadata> Produced by OmniGraffle 7.13 
+    <dc:date>2023-03-31 13:24:29 +0000</dc:date>
+  </metadata>
+  <g id="Canvas_1" stroke-dasharray="none" fill="none" fill-opacity="1" stroke-opacity="1" stroke="none">
+    <title>Canvas 1</title>
+    <g id="Canvas_1: Layer 1">
+      <title>Layer 1</title>
+      <g id="Graphic_2">
+        <path d="M 329.414 349.378 C 358.077 349.378 381.312 326.129 381.312 297.449 C 381.312 268.769 358.077 245.52 329.414 245.52 C 300.752 245.52 277.517 268.769 277.517 297.449 C 277.517 326.129 300.752 349.378 329.414 349.378 Z" stroke="white" stroke-linecap="butt" stroke-linejoin="round" stroke-width="3.58"/>
+      </g>
+      <g id="Graphic_3">
+        <path d="M 329.414 388.398 C 379.613 388.398 420.308 347.678 420.308 297.448 C 420.308 247.218 379.613 206.498 329.414 206.498 C 279.214 206.498 238.52 247.218 238.52 297.448 C 238.52 347.678 279.214 388.398 329.414 388.398 Z" stroke="#fcaa55" stroke-linecap="butt" stroke-linejoin="round" stroke-width="3.58"/>
+      </g>
+      <g id="Graphic_4">
+        <path d="M 329.414 429.988 C 402.568 429.988 461.871 370.648 461.871 297.449 C 461.871 224.25 402.568 164.91 329.414 164.91 C 256.259 164.91 196.956 224.25 196.956 297.449 C 196.956 370.648 256.259 429.988 329.414 429.988 Z" stroke="#fc57ac" stroke-linecap="butt" stroke-linejoin="round" stroke-width="3.58"/>
+      </g>
+      <g id="Graphic_5">
+        <path d="M 329.413 475.836 C 427.874 475.836 507.691 395.969 507.691 297.448 C 507.691 198.927 427.874 119.061 329.413 119.061 C 230.953 119.061 151.135 198.927 151.135 297.448 C 151.135 395.969 230.953 475.836 329.413 475.836 Z" stroke="#ff00fc" stroke-linecap="butt" stroke-linejoin="round" stroke-width="3.58"/>
+      </g>
+      <g id="Graphic_6">
+        <path d="M 329.413 526.107 C 455.621 526.107 557.932 423.733 557.932 297.448 C 557.932 171.163 455.621 68.7891 329.413 68.7891 C 203.206 68.7891 100.895 171.163 100.895 297.448 C 100.895 423.733 203.206 526.107 329.413 526.107 Z" stroke="#a402fb" stroke-linecap="butt" stroke-linejoin="round" stroke-width="3.58"/>
+      </g>
+      <g id="Graphic_7">
+        <path d="M 329.413 580.475 C 485.629 580.475 612.267 453.76 612.267 297.449 C 612.267 141.137 485.629 14.4216 329.413 14.4216 C 173.198 14.4216 46.5598 141.137 46.5598 297.449 C 46.5598 453.76 173.198 580.475 329.413 580.475 Z" stroke="#5101fd" stroke-linecap="butt" stroke-linejoin="round" stroke-width="3.58"/>
+      </g>
+    </g>
+  </g>
+</svg>
