@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Envelope Animation -->
+        <div class="envelope-container" id="envelopeContainer">
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body"></div>
+                <div class="heart-icon">❤️</div>
+            </div>
+            <p class="click-text">Click to open your Valentine's message my Bhuvana ❤️</p>
+        </div>
+
+        <!-- Valentine Content (Hidden initially) -->
+        <div class="valentine-content" id="valentineContent">
+            <h1 class="title">Happy Valentine's Day! my Bhuvana and my love ❤️</h1>
+            
+            <div class="photo-gallery">
+                <div class="photo-frame">
+                    <img src="/home/jai/Pictures/b/WhatsApp Image 2026-02-14 at 1.53.31 PM.jpeg" alt="Romantic couple">
+                </div>
+                <div class="photo-frame">
+                    <img src="/home/jai/Pictures/b/WhatsApp Image 2026-02-14 at 1.55.19 PM.jpeg" alt="Romantic sunset">
+                </div>
+            </div>
+
+            <div class="love-message">
+                <p class="message">To my dearest Bhuvana,</p>
+                <p class="message-text">
+                    Every moment with you is like a beautiful dream. 
+                    Your smile lights up my world, and your love makes 
+                    every day special. Today, I want to remind you how 
+                    much you mean to me.
+                </p>
+                <p class="message-signature"> By  Jai Ganesh ❤️</p>
+            </div>
+
+            <!-- Love Meter -->
+            <div class="love-meter">
+                <h3>Our Love Meter</h3>
+                <div class="meter-bar">
+                    <div class="meter-fill" style="width: 100%"></div>
+                </div>
+                <p class="meter-text">100% Perfect Match!</p>
+            </div>
+
+            <!-- Interactive Question -->
+            <div class="question-box">
+                <p class="question">Will you be my Valentine?</p>
+                <div class="buttons">
+                    <button class="btn-yes" id="yesBtn">Yes! ❤️</button>
+                    <button class="btn-no" id="noBtn">No</button>
+                </div>
+                <div class="response-message" id="responseMessage"></div>
+            </div>
+
+            <!-- Love Notes Carousel -->
+            <div class="love-notes">
+                <h3>Sweet Notes</h3>
+                <div class="notes-carousel">
+                    <div class="note">You're the best thing that ever happened to me</div>
+                    <div class="note">I love you more than pizza! 🍕❤️</div>
+                    <div class="note">You make my heart smile</div>
+                    <div class="note">Can't imagine my life without you</div>
+                </div>
+            </div>
+
+            <!-- Music Player  1-->
+            <div class="music-player">
+                <button class="music-btn" id="musicBtn">
+                    <span class="music-icon">🎵</span>
+                    <span class="music-text">Play Love Song</span>
+                </button>
+                <p class="meter-text">Thank you for sending me this video. It's my favorite for Valentine's Day, and it makes me feel so happy. Thanks again for sharing it with me!" 😊</p>
+                <audio id="loveSong" loop>
+                    
+                    <source src="/home/jai/Pictures/b/WhatsApp Ptt 2026-02-14 at 2.23.04 PM.ogg" type="audio/mpeg">
+                </audio>
+                
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
