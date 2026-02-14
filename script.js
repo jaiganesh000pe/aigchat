@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Yes button click
     yesBtn.addEventListener('click', function() {
         responseMessage.textContent = 'Yay! You made me the happiest person! I love You To Bhuvana  ❤️';
-        responseMessage.style.animation = 'heartbeat 2s ease';
+        responseMessage.style.animation = 'heartbeat 1s ease';
         
         // Create more hearts
         for(let i = 0; i < 10; i++) {
